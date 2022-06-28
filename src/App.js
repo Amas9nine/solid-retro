@@ -1,8 +1,10 @@
+import "./App.css";
 import { useTranslation } from 'react-i18next';
 import { Trans, } from 'react-i18next';
 import React from 'react'
 import {useSelector,useDispatch} from 'react-redux'
 import {helloWorld} from './reduxToolkit/reducer'
+
 
 function App() {
 const {t , i18n} = useTranslation();
