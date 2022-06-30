@@ -1,4 +1,4 @@
-import "../src/style/index.scss";
+import "./App.css";
 import { useTranslation } from "react-i18next";
 import { Trans } from "react-i18next";
 import { useSelector, useDispatch } from "react-redux";
@@ -13,7 +13,7 @@ function App() {
   const show = useSelector((state) => state.toolkit.hello);
   const dispatch = useDispatch();
   return (
-    <>
+    <div className="App">
       <div className="testContainer">
         <p>he</p>
         <p>hel</p>
@@ -29,7 +29,7 @@ function App() {
       </Trans>
       <div>{t("description.part2")}</div>
       {show} <button onClick={() => dispatch(helloWorld())}></button>
-    </>
+    </div>
   );
 }
 
