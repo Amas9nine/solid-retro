@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import "./i18n";
 import { Provider } from "react-redux";
 import { store } from "./reduxToolkit";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
