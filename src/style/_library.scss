@@ -1,11 +1,4 @@
-$baseFamily:Manrope,sans-serif;
-$textColor : #334357;
-
-@mixin baseText($weight){
-  font: {
-    family:$baseFamily;
-    weight:$weight;
-  }
-  color:$textColor;
+@mixin empty($empty){
+  color:$empty;
 }
 

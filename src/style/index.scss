@@ -1,11 +1,3 @@
 @use './library';
 
-.testContainer {
-  p {
-    @include library.baseText(700)
-  }
-
-  i {
-    @include library.baseText(500)
-  }
-}
+@include library.empty(#fff)
