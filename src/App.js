@@ -1,4 +1,14 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
 import { useTranslation } from "react-i18next";
 import { Trans } from "react-i18next";
 import { useSelector, useDispatch } from "react-redux";
