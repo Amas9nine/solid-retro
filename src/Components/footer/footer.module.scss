@@ -1,0 +1,118 @@
+@import "./variables";
+
+.upFooterSection {
+  text-align: center;
+  background: linear-gradient(180deg, #0a52e5 -20.42%, #2e70f9);
+  padding: 70px 0;
+  width: 100%;
+
+  .logos {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    @include breackpoint(lg){
+      width: 50%;
+      flex-wrap: wrap;
+      img{
+        padding: 20px;
+      }
+      @include breackpoint(md){
+        width: 100%;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .text {
+    height: 80px;
+    margin: 60px 0px;
+    text-align: center;
+    @include breackpoint(lg){
+      width: 55%;
+      margin: 0 auto;
+      padding: 50px 0;
+    }
+    @include breackpoint(md){
+      width: 80%;
+      flex-wrap: wrap;
+    }
+    h2 {
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+
+  .btn {
+    button {
+      background-color: #ffb800;
+      box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+      border-radius: 2px;
+      color: #3e3e52;
+      text-decoration: none;
+      padding: 16px 40px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      font-family: Manrope, sans-serif;
+      @include breackpoint(lg){
+        margin-top: 80px;
+      }
+    }
+  }
+}
+
+footer {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 60px;
+  display: grid;
+  padding: 90px 0;
+  grid-template-columns: 2fr 180px 180px 180px 180px 1fr;
+  grid-gap: 5px;
+  @include breackpoint(lg){
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 50px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  @include breackpoint(md){
+    display: block;
+    text-align: center;
+  }
+
+  .logo {
+    .logoImg {
+      img {
+        width: 25px;
+        height: 25px;
+      }
+      h3 {
+        margin-top: 0.5em;
+        font-weight: 400;
+        line-height: 1.8;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .menu {
+    @include fullBlock()
+  }
+
+  .resources {
+    @include fullBlock()
+  }
+
+  .tools {
+   @include fullBlock()
+  }
+
+  .terms {
+    @include fullBlock()
+  }
+
+  .followUs {
+    @include fullBlock()
+  }
+}
