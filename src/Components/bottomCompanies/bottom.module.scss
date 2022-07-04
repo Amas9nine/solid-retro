@@ -1,0 +1,63 @@
+@import "./variables";
+
+.upFooterSection {
+  text-align: center;
+  background: linear-gradient(180deg, #0a52e5 -20.42%, #2e70f9);
+  padding: 70px 0;
+  width: 100%;
+
+  .logos {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    @include breackpoint(lg){
+      width: 50%;
+      flex-wrap: wrap;
+      img{
+        padding: 20px;
+      }
+      @include breackpoint(md){
+        width: 100%;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .text {
+    height: 80px;
+    margin: 60px 0px;
+    text-align: center;
+    @include breackpoint(lg){
+      width: 55%;
+      margin: 0 auto;
+      padding: 50px 0;
+    }
+    @include breackpoint(md){
+      width: 80%;
+      flex-wrap: wrap;
+    }
+    h2 {
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+
+  .btn {
+    button {
+      background-color: #ffb800;
+      box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+      border-radius: 2px;
+      color: #3e3e52;
+      text-decoration: none;
+      padding: 16px 40px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      font-family: Manrope, sans-serif;
+      @include breackpoint(lg){
+        margin-top: 80px;
+      }
+    }
+  }
+}

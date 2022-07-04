@@ -1,9 +1,9 @@
-import Footer from "../Components/footer/Footer";
+import BottomCompanies from "../Components/bottomCompanies/BottomCompanies";
 
 export default function HomePage() {
   return (
     <div>
-      <Footer />
+      <BottomCompanies />
     </div>
   );
 }

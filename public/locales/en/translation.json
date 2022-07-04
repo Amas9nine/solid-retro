@@ -1,7 +1,58 @@
 {
     "title": "Welcome to react using react-i18next ",
     "description": {
-        "part1": "To get started , edit <1>src/App.js</1> and saveto reload  " ,
+        "part1": "To get started , edit <1>src/App.js</1> and saveto reload  ",
         "part2": "Switch language between english and german using buttons above. "
+    },
+    "componies": "Join a thousands of other companies to improve your team",
+    "GetStartedForFree": "Get Started For Free",
+    "footer": {
+        "helpedTeams": "We`ve helped teams improve in more",
+        "retrospective": "retrospective",
+        "menu": {
+            "Menu":"Menu",
+            "About":"About",
+            "Pricing":"Pricing",
+            "Features":"Features",
+            "FAQ":"FAQ",
+            "WallofLove":"Wall Of Love",
+            "Feature":"Feature Requests",
+            "SavePlanet":"Save the Planet"
+        },
+        "resources":{
+            "Resources":"Resources",
+            "Templates":"Retrospective Templates",
+            "Academy":"Retrospective Academy",
+            "Blog":"Blog",
+            "Online":"Online Sticky Notes",
+            "OnlineScrum":"Online Scrum Board",
+            "Brainstorm":"Brainstorm"
+        },
+        "tools":{
+            "Tools":"Tools",
+            "Meeting":"Meeting Agenda Tool",
+            "Minutes":"Meeting Minutes Tool",
+            "Time":"Meeting Timer Tool",
+            "Team":"Team Name Gnerator",
+            "Burndown":"Burndown Chart Generator",
+            "Easy":"Easy Kudos",
+            "Moving":"Moving Motivators tool"
+        },
+        "terms":{
+            "Terms":"Terms",
+            "Conditions":"Terms and Conditions",
+            "Privacy":"Privacy Polycy",
+            "Security":"Security",
+            "Affllate":"Affiliate Program"
+        },
+        "follow":{
+            "Follow":"Follow Us",
+            "Twitter":"Twitter",
+            "Instagram":"Instagram",
+            "LinkedIn":"LinkedIn",
+            "YouTube":"YouTube",
+            "Contact":"Contact Us"       
+        }
+
     }
 }
