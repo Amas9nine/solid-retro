@@ -12,7 +12,6 @@ export default function BottomCompanies() {
           <img src="https://easyretro.io/_nuxt/img/ambienz-white.fd56aae.png" alt="AMBIENZ" />
           <img src="https://easyretro.io/_nuxt/img/xing-white.bb30b9b.png" alt="XING" />
         </div>
-
         <div className={css.text}>
           <h2>{t("componies")}</h2>
         </div>
