@@ -2,7 +2,7 @@ import css from "./footer.module.scss";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { menu, resources, tools, terms, followUs } from "./footerData";
-import Logo from "../../images/footer/logo.svg";
+
 const Footer = () => {
   const { t } = useTranslation();
 
@@ -10,7 +10,7 @@ const Footer = () => {
     <footer>
       <div className={css.logo}>
         <div className={css.logoImg}>
-          <img src={Logo} alt="" />
+          <img src={"/images/footer/logo.svg"} alt="" />
           <h3>
             {t("footer.helpedTeams")} <br />
             <span style={{ color: "#2e70f9" }}>1,000,000 </span> {t("footer.retrospective")}

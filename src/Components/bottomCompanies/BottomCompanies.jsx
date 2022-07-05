@@ -1,10 +1,6 @@
 import css from "../bottomCompanies/bottom.module.scss";
 import { useTranslation } from "react-i18next";
 import Footer from "../footer/Footer";
-import Intercom from "../../images/footer/Intercomm.svg";
-import Vividseats from "../../images/footer/vividseats.png";
-import Ambienz from "../../images/footer/intercom.svg";
-import Xing from "../../images/footer/xing.svg";
 
 export default function BottomCompanies() {
   const { t } = useTranslation();
@@ -12,10 +8,10 @@ export default function BottomCompanies() {
     <div className={css.footerAndSecion}>
       <div className={css.upFooterSection}>
         <div className={css.logos}>
-          <img src={Intercom} alt="INTERCOM" />
-          <img src={Vividseats} alt="VIVIDSEATS" />
-          <img src={Ambienz} alt="AMBIENZ" />
-          <img src={Xing} alt="XING" />
+          <img src={"/images/footer/Intercomm.svg"} alt="INTERCOM" />
+          <img src={"/images/footer/vividseats.png"} alt="VIVIDSEATS" />
+          <img src={"/images/footer/intercom.svg"} alt="AMBIENZ" />
+          <img src={"/images/footer/xing.svg"} alt="XING" />
         </div>
         <div className={css.text}>
           <h2>{t("componies")}</h2>
