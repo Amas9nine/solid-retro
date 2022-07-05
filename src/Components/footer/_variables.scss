@@ -1,8 +1,9 @@
 @mixin fullBlock() {
   legend {
     margin-top: 25px;
+    color: #5e5e71;
    font: {
-     family: Manrope;
+     family: Manrope,sans-serif;
      weight: 600;
      size: 16px;
    }
