@@ -1,7 +1,7 @@
 import css from "./footer.module.scss";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { menu, resources, tools, terms, followUs } from "./footerData";
+import { menu, resources, tools, terms, followUs } from "../../constants/footerData";
 
 const Footer = () => {
   const { t } = useTranslation();

@@ -1,6 +1,5 @@
 import css from "../bottomCompanies/bottom.module.scss";
 import { useTranslation } from "react-i18next";
-import Footer from "../footer/Footer";
 
 export default function BottomCompanies() {
   const { t } = useTranslation();
@@ -20,7 +19,6 @@ export default function BottomCompanies() {
           <button>{t("GetStartedForFree")}</button>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
