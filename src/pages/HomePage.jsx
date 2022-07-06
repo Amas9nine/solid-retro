@@ -1,3 +1,11 @@
+import BottomCompanies from "../Components/bottomCompanies/BottomCompanies";
+import Footer from "../../src/Components/footer/Footer";
+
 export default function HomePage() {
-  return <div>HomePage</div>;
+  return (
+    <div>
+      <BottomCompanies />
+      <Footer />
+    </div>
+  );
 }
