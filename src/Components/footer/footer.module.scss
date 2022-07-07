@@ -1,0 +1,59 @@
+@import "./variables";
+
+footer {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 60px;
+  display: grid;
+  padding: 90px 0;
+  grid-template-columns: 2fr 180px 180px 180px 180px 1fr;
+  grid-gap: 10px;
+
+  @include breackpoint(lg) {
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 50px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  @include breackpoint(md) {
+    display: block;
+    text-align: center;
+  }
+
+  .logo {
+    .logoImg {
+      img {
+        width: 25px;
+        height: 25px;
+      }
+
+      h3 {
+        margin-top: 0.5em;
+        font-weight: 400;
+        line-height: 1.8;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .menu {
+    @include fullBlock()
+  }
+
+  .resources {
+    @include fullBlock()
+  }
+
+  .tools {
+    @include fullBlock()
+  }
+
+  .terms {
+    @include fullBlock()
+  }
+
+  .followUs {
+    @include fullBlock()
+  }
+}
