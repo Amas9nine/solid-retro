@@ -1,4 +1,4 @@
-import css from "./Jumbotron.module.css";
+import css from "./Jumbotron.module.scss";
 export default function Jumbotron() {
   return (
     <div className={css.global}>
