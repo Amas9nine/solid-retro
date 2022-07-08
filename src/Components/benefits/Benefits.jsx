@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import css from "../benefits/benefits.module.scss";
-import { cards, benefitCards } from "../../constants/footerData";
+import { cards, benefitCards } from "../../constants/benefitsData";
 import { Link } from "react-router-dom";
 
 const Benefits = () => {
@@ -27,10 +27,10 @@ const Benefits = () => {
         </div>
         <h2 className={css.retrospective}>{t("benefits.WhatPeopleSay")}</h2>
         <div className={css.WhatPeople}>
-          {cards.map((item) => (
-            <div className={css.card} key={item.id}>
+          {cards.map((item, index) => (
+            <div className={css.card} key={index}>
               <header>
-                <img src={item.img ? item.img : "/images/benefits/avatar.png"} alt="" />
+                <img src={item.img ? item.img : "/images/benefits/avatar.png"} alt="AVATAR" />
                 <div className={css.blockName}>
                   <h2>{t(item.name)}</h2>
                   <p>{t(item.job)}</p>
@@ -73,10 +73,10 @@ const Benefits = () => {
       <Container>
         <div className={css.cards}>
           <ul>
-            {benefitCards.map((item) => (
-              <li key={item.id}>
+            {benefitCards.map((item, index) => (
+              <li key={index}>
                 <div>
-                  <img src={item.img} alt="" />
+                  <img src={item.img} alt="IMG" />
                 </div>
                 {t(item.name)}
               </li>
