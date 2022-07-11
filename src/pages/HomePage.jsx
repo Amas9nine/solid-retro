@@ -1,5 +1,4 @@
 import BottomCompanies from "../Components/bottomCompanies/BottomCompanies";
-import Footer from "../../src/Components/footer/Footer";
 import Benefits from "../Components/benefits/Benefits";
 
 export default function HomePage() {
@@ -7,7 +6,6 @@ export default function HomePage() {
     <div>
       <Benefits />
       <BottomCompanies />
-      <Footer />
     </div>
   );
 }
