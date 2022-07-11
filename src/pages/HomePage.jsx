@@ -1,3 +1,5 @@
+import BottomCompanies from "../Components/bottomCompanies/BottomCompanies";
+import Benefits from "../Components/benefits/Benefits";
 import Companies from "../components/companies/Companies";
 import Jumbotron from "../components/jumbotron/Jumbotron";
 import BottomCompanies from "../components/bottomCompanies/BottomCompanies";
@@ -11,7 +13,6 @@ export default function HomePage() {
       <Companies />
       <Benefits />
       <BottomCompanies />
-      <Footer />
     </div>
   );
 }

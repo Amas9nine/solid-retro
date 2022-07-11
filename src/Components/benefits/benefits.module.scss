@@ -1,4 +1,5 @@
 @import "./variables";
+@import "../globalVariables.scss";
 
 .retrospective {
   width: 100%;
@@ -175,6 +176,17 @@
 .clickhere {
   display: flex;
   justify-content: center;
+  padding: 50px;
+  text-align: center;
+  @include breackpoint(lg){
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  @include breackpoint(sm){
+    padding: 0;
+    margin-bottom: 25px;
+  }
+ 
   span {
     font-size: 18px;
     line-height: 1.7em;
@@ -188,7 +200,6 @@
   @include breackpoint(sm) {
     padding: 0;
   }
-
   a {
     font-size: 18px;
     line-height: 1.7em;
