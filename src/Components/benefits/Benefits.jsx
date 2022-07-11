@@ -42,9 +42,9 @@ const Benefits = () => {
           ))}
         </div>
         <span className={css.clickhere}>
-          <Link to="#">{t("benefits.ClickHere.link")}</Link>
           <span>
-            <p> {t("benefits.ClickHere.text")}</p>
+            <Link to="#">{t("benefits.ClickHere.link")}</Link>
+            {t("benefits.ClickHere.text")}
           </span>
         </span>
       </Container>

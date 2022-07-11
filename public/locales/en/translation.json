@@ -135,12 +135,67 @@
             "nineth": "You'll be able to run surveys during your retrospectives",
             "tenth": "You'll be able to incorporate Slack, Confluence and Jira integration"
         },
-        "Receive":{
-            "title":"Receive Tips & Tricks About Sprint Retrospectives",
-            "first":"Looking for a few extra tips and ideas on how to get the most out of your team's sprint retrospectives?",
-            "second":"One of the advantages of sprint retrospectives are that every team can customise the way they use it to benefit them most. Being in this space for as long as we have, we have a whole bag of tricks that you can use to help customise your sprint retrospective strategy.",
-            "thirth":"Sign up below to get these tips and tricks delivered straight to your inbox!"
+        "Receive": {
+            "title": "Receive Tips & Tricks About Sprint Retrospectives",
+            "first": "Looking for a few extra tips and ideas on how to get the most out of your team's sprint retrospectives?",
+            "second": "One of the advantages of sprint retrospectives are that every team can customise the way they use it to benefit them most. Being in this space for as long as we have, we have a whole bag of tricks that you can use to help customise your sprint retrospective strategy.",
+            "thirth": "Sign up below to get these tips and tricks delivered straight to your inbox!"
         },
-        "subscribe":"Subscribe Here"
+        "subscribe": "Subscribe Here"
+    },
+    "features": {
+        "title": "Amazing features",
+        "first": {
+            "name": "Different ways of logging in",
+            "content": "Login using your email or Google account"
+        },
+        "second": {
+            "name": "Create boards",
+            "content": "Create private or public boards using more than 100 different pre-defined templates"
+        },
+        "thirth": {
+            "name": "Fully customize your board",
+            "content": "Add board name and context, create unlimited columns, rename them and change their color"
+        },
+        "fourth": {
+            "name": "Create teams",
+            "content": "Create teams and invite unlimited people to collaborate on boards"
+        },
+        "fifth": {
+            "name": "See all your boards",
+            "content": "Check and filter all your past retros in a simple dashboard"
+        },
+        "sixth": {
+            "name": "Sort cards",
+            "content": "Sort cards by order, created date or number of votes. Also filter cards by text"
+        },
+        "seventh": {
+            "name": "Add comments",
+            "content": "Allow people to comment on cards"
+        },
+        "eighth": {
+            "name": "Vote on cards",
+            "content": "Vote on cards and set the max number of votes per person"
+        },
+        "nineth": {
+            "name": "Drag and drop cards",
+            "content": "You can drag cards to other columns, drag cards on the same column and merge cards"
+        },
+        "tenth": {
+            "name": "Export your board",
+            "content": "Export your board to the clipboard, to a Confluence page, or PDF, CSV, PNG, EXCEL, and DOCX formats"
+        },
+        "eleventh": {
+            "name": "Export your Action Items",
+            "content": "Export your Action Items as Jira issues"
+        },
+        "twelveth": {
+            "name": "Survey on your boards",
+            "content": "Easily run surveys right on your boards"
+        },
+        "thertheenth": {
+            "name": "Slack integration",
+            "content": "Show a notification on your team's channel when a board is created"
+        }
     }
 }
