@@ -1,9 +1,11 @@
 import css from "./Companies.module.scss";
+import { useTranslation } from "react-i18next";
 export default function Companies() {
+  const { t } = useTranslation();
   return (
     <div className={css.global}>
       <div className="container">
-        <h2>Trusted by thousands of companies worldwide</h2>
+        <h2>{t("companies.title")}</h2>
         <div className={css.icons}>
           <img className={css.intercomIcon} src="./images/companies/intercom.png" alt="intercom" />
           <img
