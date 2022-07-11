@@ -13,6 +13,7 @@
   @include breackpoint(lg) {
     width: 100%;
   }
+
   @include breackpoint(sm) {
     width: 100%;
     margin: 45px auto;
@@ -35,21 +36,26 @@
 
   .left {
     width: 50%;
-    @include breackpoint(lg){
+
+    @include breackpoint(lg) {
       width: 100%;
       display: block;
     }
+
     img {
       width: 100%;
-      @include breackpoint(lg){
+
+      @include breackpoint(lg) {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
       }
-      @include breackpoint(sm){
-       width: 100%;
+
+      @include breackpoint(sm) {
+        width: 100%;
       }
+
       margin-bottom: 20px;
       border-radius: 3px;
       box-shadow: 0 4px 20px 0 rgb(0 0 0 / 10%);
@@ -58,10 +64,12 @@
 
   .right {
     width: 50%;
-    @include breackpoint(lg){
+
+    @include breackpoint(lg) {
       width: 100%;
       margin: 0 auto;
     }
+
     p {
       display: block;
       max-width: 800px;
@@ -105,7 +113,7 @@
   @include breackpoint(lg) {
     grid-template-columns: 250px 250px;
     gap: 15px 15px;
-    justify-content:center;
+    justify-content: center;
 
     .card {
       padding: 0;
@@ -124,6 +132,7 @@
     background: #fff;
     box-shadow: 0 2px 8px rgb(62 62 82 / 10%);
     gap: 32px;
+
     header {
       display: flex;
       align-items: center;
@@ -178,6 +187,19 @@
     margin-bottom: 25px;
   }
  
+  span {
+    font-size: 18px;
+    line-height: 1.7em;
+    color: #333;
+  }
+
+  @include breackpoint(lg) {
+    padding: 0;
+  }
+
+  @include breackpoint(sm) {
+    padding: 0;
+  }
   a {
     font-size: 18px;
     line-height: 1.7em;
@@ -198,25 +220,28 @@
   }
 
   @include title(36px);
-  @include breackpoint(sm){
-   width: 100%;
-   padding: 10px;
+
+  @include breackpoint(sm) {
+    width: 100%;
+    padding: 10px;
   }
 }
 
 .whatBenefits {
   @include title(36px);
-  @include breackpoint(sm){
+
+  @include breackpoint(sm) {
     padding: 15px;
   }
 }
 
 .cards {
   ul {
-    @include breackpoint(lg){
+    @include breackpoint(lg) {
       padding: 0;
       margin: 0;
     }
+
     display: flex;
     grid-gap: 20px;
     gap: 20px;
@@ -231,7 +256,8 @@
 .receive {
   padding: 70px 0;
   @include title(40px);
-  @include breackpoint(lg){
+
+  @include breackpoint(lg) {
     @include title(22px)
   }
 }
