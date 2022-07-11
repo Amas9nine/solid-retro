@@ -18,7 +18,7 @@ export default function Jumbotron() {
         </div>
       </div>
       <div className={css.right}>
-        <img src="./images/jumbotron.png" />
+        <img src="./images/companies/jumbotron.png" />
       </div>
     </div>
   );

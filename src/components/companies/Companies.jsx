@@ -5,10 +5,14 @@ export default function Companies() {
       <div className="container">
         <h2>Trusted by thousands of companies worldwide</h2>
         <div className={css.icons}>
-          <img src="./images/intercom.png" alt="intercom" />
-          <img style={{ height: "25px" }} src="./images/vividseats.png" alt="vividseats" />
-          <img src="./images/xing.png" alt="xing" />
-          <img src="./images/ambienz.png" alt="ambienz" />
+          <img className={css.intercomIcon} src="./images/companies/intercom.png" alt="intercom" />
+          <img
+            className={css.vividseatsIcon}
+            src="./images/companies/vividseats.png"
+            alt="vividseats"
+          />
+          <img className={css.xingIcon} src="./images/companies/xing.png" alt="xing" />
+          <img className={css.ambienzIcon} src="./images/companies/ambienz.png" alt="ambienz" />
         </div>
       </div>
     </div>

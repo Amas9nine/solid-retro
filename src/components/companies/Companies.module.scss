@@ -21,28 +21,45 @@
         flex-wrap: wrap;
     }
 }
+
 .global{
+    box-sizing: border-box;
     background-color: #f1f1f1;
-    height: 50vh;
+    height: 45vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.icons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.icons img{
-    max-width: 120px;
-    height: 35px;
-    margin-left: 60px;
-    text-align: center;
-    margin-top: 35px;
 }
 div h2{
     text-align: center;
     font-size: 22px;
     font-weight: bold;
     color: #334357;
+    margin-bottom: 15px;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+.intercomIcon{
+    height: 28px;
+    margin-left: 60px;
+    margin-top: 35px;
+}
+.vividseatsIcon{
+    height: 20px;
+    margin-left: 60px;
+    margin-top: 35px;
+}
+.xingIcon{
+    height: 40px;
+    margin-left: 60px;
+    margin-top: 25px;
+}
+.ambienzIcon{
+    height: 35px;
+    margin-left: 60px;
+    margin-top: 35px;
 }
