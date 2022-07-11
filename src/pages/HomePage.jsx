@@ -1,5 +1,5 @@
-import BottomCompanies from "../Components/bottomCompanies/BottomCompanies";
-import Footer from "../../src/Components/footer/Footer";
+import BottomCompanies from "../components/bottomCompanies/BottomCompanies";
+import Footer from "../../src/components/footer/Footer";
 
 export default function HomePage() {
   return (
