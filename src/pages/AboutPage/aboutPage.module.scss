@@ -1,0 +1,65 @@
+@import "../../Components/globalVariables.scss";
+.sectionHeader{
+  margin-bottom: 60px;
+  text-align: center;
+}
+.aboutText{
+  max-width: 960px;
+  font-size: 18px;
+  margin: auto;
+  p{
+    margin: 1em 0;
+  }
+}
+.ourMission{
+  max-width: 960px;
+  font-size: 18px;
+  margin:1em auto;
+}
+.whoIs{
+  text-align: center;
+  margin: 40px 0;
+}
+.devs{
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: auto;
+  @include breackpoint(sm){
+    flex-direction: column;
+  }
+}
+.devsCard{
+  text-align: center;
+  img{
+    width: 150px;
+    height: 150px;
+  }
+  h4{
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  p{
+    margin-top: 0.5em;
+    font-size: 16px;
+  }
+}
+
+.bottom{
+  text-align: center;
+  margin-top: 100px;
+  h4{
+    margin-bottom: 0.5em;
+    margin-top: 1.5em;
+    display: block;
+    color: #3e3e52;
+  }
+  .imgs{
+    display: flex;
+    align-items: center;
+    grid-gap: 1.5em;
+    gap: 1.5em;
+    justify-content: center;
+    margin-top: 2em;
+  }
+}
