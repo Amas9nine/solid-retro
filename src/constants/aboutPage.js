@@ -1,12 +1,15 @@
 export const title = [
   {
-    title: "about.first"
+    title: "about.first",
+    id: 1
   },
   {
-    title: "about.second"
+    title: "about.second",
+    id: 2
   },
   {
-    title: "about.thirth"
+    title: "about.thirth",
+    id: 3
   }
 ];
 

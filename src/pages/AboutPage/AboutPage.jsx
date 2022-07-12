@@ -11,14 +11,14 @@ const Aboutpage = () => {
         <h1 className={css.sectionHeader}>{t("about.aboutUs")}</h1>
         <div className={css.aboutText}>
           {title.map((item) => (
-            <p>{t(item.title)}</p>
+            <p key={item.id}>{t(item.title)}</p>
           ))}
         </div>
         <h2 className={css.whoIs}>{t("about.whoIs")}</h2>
         <div className={css.devs}>
           {devs.map((item) => (
             <div className={css.devsCard}>
-              <img src={item.img} alt="" />
+              <img src={item.img} alt="Devs" />
               <h4>{t(item.name)}</h4>
               <p>{t(item.job)}</p>
             </div>
