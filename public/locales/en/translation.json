@@ -53,5 +53,23 @@
             "YouTube": "YouTube",
             "Contact": "Contact Us"
         }
+    },
+    "register":{
+        "register": "Register",
+        "name": "Name",
+        "email": "Email",
+        "placeholder_email": "Your email",
+        "password": "Password",
+        "placeholder_password": "Type your password",
+        "p": "Should contain at least 8 chars, 1 number, 1 uppercase and 1 lowercase.",
+        "checkbox": "By signing up you agree to our and ",
+        "terms": "Terms",
+        "and": "and",
+        "privacy": "Privacy Policy",
+        "checkbox2": "I want to receive updates, promotions and tips in my inbox",
+        "create_account": "Create account",
+        "sign_in": "Sign in with Google",
+        "account": "Already have an account?",
+        "login": "Login"
     }
 }
