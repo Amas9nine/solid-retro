@@ -4,6 +4,7 @@ import Companies from "../Components/companies/Companies";
 import Jumbotron from "../Components/jumbotron/Jumbotron";
 import Footer from "../../src/components/footer/Footer";
 import Benefits from "../Components/benefits/Benefits";
+import Footer from "../Components/footer/Footer";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Companies />
       <Benefits />
       <BottomCompanies />
+      <Footer />
     </div>
   );
 }
