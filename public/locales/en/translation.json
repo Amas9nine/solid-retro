@@ -71,5 +71,183 @@
         "sign_in": "Sign in with Google",
         "account": "Already have an account?",
         "login": "Login"
+    "jumbotron": {
+        "title": "Improve with Fun Sprint Retrospectives",
+        "paragraph": "Collaborate with your remote team and get better at what you do with a simple, intuitive and beautiful tool",
+        "button": "Get Started for Free"
+      },
+      "companies":{
+        "title": "Trusted by thousands of companies worldwide"
+      },
+    "benefits": {
+        "WhatIsAFun": "What Is A Fun Retrospective?",
+        "text": {
+            "Aretrospective": "A retrospective is an opportunity to learn and improve, in a fun environment. To break it down in the simplest way you should cover:",
+            "WhatWorkedWell": "What worked well?",
+            "WhatDidnt": "What didn't work well?",
+            "WhatActionable": "What actionable items can we do to improve the situation?",
+            "Ltext": "These are generally quick sessions that are not only informative and contribute to the team's functionality and efficiency, but also do something most ‘Retrospectives’ forget to do: Engage the team.",
+            "Stext": "Our EasyRetro tool ensures you maintain high team morale by making these team collaboration opportunities effortless and fun."
+        },
+        "WhatPeopleSay": "What People Say About Us?",
+        "cards": {
+            "first": {
+                "name": "Catlin Docker",
+                "job": "Director of Program Operations",
+                "com": "Excellent customer support from Tchales! We were working through a series of sticky permissions and access issues. Not only did Tchales acknowledge the blockers we were experience, he was incredibly patient and kind as we brainstormed ways to overcome it. Appreciated Tchales clear communication and creative thinking.",
+                "data": "29 june 2022"
+            },
+            "second": {
+                "name": "Will Bridges",
+                "job": "Engeener Manager, Hotel Engine",
+                "com": "Having used EasyRetro at 3 different positions now over the years I have to say it's effective, simple, and a great tool to make retro's easy to digest and keep the historical context of your ceremonies. It's a great addition for your ceremonies and the support team is there if you ever have any issue.",
+                "data": "28 june 2022"
+            },
+            "thirth": {
+                "name": "Chriselle",
+                "job": "",
+                "com": "I first used EasyRetro on a previous project and it was the best tool I had come across. It is so easy to use and can be customized to the needs of the team. EasyRetro is the easiest way to run retrospectives with your team!",
+                "data": "6 june 2022"
+            },
+            "fourth": {
+                "name": "Estefania Barboza",
+                "job": "It Manager ,Argenway",
+                "com": "Thank you for creatng this great tool!",
+                "data": "31 may 2022"
+            },
+            "fifth": {
+                "name": "isshai K",
+                "job": "Agile Coach,It industry Tools",
+                "com": "EasyRetro has the best retrospective tools on the market! They are fun and easy to use when conducting Sprint Retro!",
+                "data": "29 june 2022"
+            },
+            "sixth": {
+                "name": "Sara Almosawi",
+                "job": "Scrum Master & Agilist,Emirates NDB",
+                "com": "EasyRetro Pretty simple and intuitive to use for your team's retrospective It helps the facilitator to effectively run engaging and action focused with the team",
+                "data": "26 june 2022"
+            }
+        },
+        "ClickHere": {
+            "link": "Click Here ",
+            "text": " ,to check what other customers are saying about EasyRetro!"
+        },
+        "GettingStart": {
+            "title": "Getting Started",
+            "first": "If you've got the fun, exciting, and innovative team - we have the tool. EasyRetro is a fun retrospective ('retro' for short) tool you can use for your regular sprint session to discuss what went well and what didn't. You'll be able to easily identify obstacles and discuss ideas for improvements that will allow you to move forward unhindered.",
+            "second": "It's also a great opportunity for everyone to see and understand the workflow and collaborations while addressing issues with this.",
+            "thirth": "Your outcome? A list of points and notes the team can action, improve on, or explore as ideas. You will also be able to refer back to your notes from the previous sprint retrospective and ensure all items were attended to.",
+            "fourth": "How to get started? to Register for free if you're a new user and follow the prompts. You will have the option to sign up for one of our packages - or - if you're still not sure if EasyRetro is the right tool for your team, sign up for our 7-day free trial!",
+            "fourthLink": " Click here ",
+            "until": "How to Get started?",
+            "fifth": "Let the productive fun begin!"
+        },
+        "WhatBenifits": {
+            "title": "What Benifits Will You Get?",
+            "first": "EasyRetro makes it effortless to run sprint retrospectives. We believe retrospectives should be democratic and collaborative.",
+            "second": "We focus on making the easiest tool possible so we don't get in front of your objective - to improve your team and the way you work.",
+            "thirth": "We believe there's no correct way of running retrospectives, that's why we made the most configurable board out there. And you can also export all your data to use on other tools."
+        },
+        "Card": {
+            "first": "All your past retros, organized and filtered in an easy-to-use dashboard.",
+            "second": "Create private or public boards using more than 100 different pre-defined templates",
+            "thirth": "Invite unlimited amounts of people to join your created teams and collaborate",
+            "fourth": "Fully customizable boards",
+            "fifth": "Add comments to your cards and vote on them.",
+            "sixth": "Sort your cards by dates, votes etc.",
+            "seventh": "Simple drag and drop functionality with your cards",
+            "eighth": "Export your boards in multiple formats",
+            "nineth": "You'll be able to run surveys during your retrospectives",
+            "tenth": "You'll be able to incorporate Slack, Confluence and Jira integration"
+        },
+        "Receive": {
+            "title": "Receive Tips & Tricks About Sprint Retrospectives",
+            "first": "Looking for a few extra tips and ideas on how to get the most out of your team's sprint retrospectives?",
+            "second": "One of the advantages of sprint retrospectives are that every team can customise the way they use it to benefit them most. Being in this space for as long as we have, we have a whole bag of tricks that you can use to help customise your sprint retrospective strategy.",
+            "thirth": "Sign up below to get these tips and tricks delivered straight to your inbox!"
+        },
+        "subscribe": "Subscribe Here"
+    },
+    "features": {
+        "title": "Amazing features",
+        "first": {
+            "name": "Different ways of logging in",
+            "content": "Login using your email or Google account"
+        },
+        "second": {
+            "name": "Create boards",
+            "content": "Create private or public boards using more than 100 different pre-defined templates"
+        },
+        "thirth": {
+            "name": "Fully customize your board",
+            "content": "Add board name and context, create unlimited columns, rename them and change their color"
+        },
+        "fourth": {
+            "name": "Create teams",
+            "content": "Create teams and invite unlimited people to collaborate on boards"
+        },
+        "fifth": {
+            "name": "See all your boards",
+            "content": "Check and filter all your past retros in a simple dashboard"
+        },
+        "sixth": {
+            "name": "Sort cards",
+            "content": "Sort cards by order, created date or number of votes. Also filter cards by text"
+        },
+        "seventh": {
+            "name": "Add comments",
+            "content": "Allow people to comment on cards"
+        },
+        "eighth": {
+            "name": "Vote on cards",
+            "content": "Vote on cards and set the max number of votes per person"
+        },
+        "nineth": {
+            "name": "Drag and drop cards",
+            "content": "You can drag cards to other columns, drag cards on the same column and merge cards"
+        },
+        "tenth": {
+            "name": "Export your board",
+            "content": "Export your board to the clipboard, to a Confluence page, or PDF, CSV, PNG, EXCEL, and DOCX formats"
+        },
+        "eleventh": {
+            "name": "Export your Action Items",
+            "content": "Export your Action Items as Jira issues"
+        },
+        "twelveth": {
+            "name": "Survey on your boards",
+            "content": "Easily run surveys right on your boards"
+        },
+        "thertheenth": {
+            "name": "Slack integration",
+            "content": "Show a notification on your team's channel when a board is created"
+        }
+    },
+    "about": {
+        "aboutUs" : "About Us",
+        "first" : "EasyRetro started as a side project from Glauber Ramos back in 2015 and now has grown to be the most used retrospective tool in the world according to Alexa.com.",
+        "second" : "- “I created as an open-source project to help my team to do better retrospectives. The board got famous inside the company and then many other companies started using it as well.”",
+        "thirth" :  "It's now used by thousands of companies worldwide, from small startups to Fortune 500 companies. It's used daily by thousands of people that want to improve the way they work and get better at what they do.",
+        "whoIs" : "Who is EasyRetro?",
+        "devs": {
+            "first" : {
+                "name" : "Marco Araujo",
+                "job" : "Developer"
+            },
+            "second" : {
+                "name" : "Glauber Ramos",
+                "job" : "Founder"
+            },
+            "thirth" : {
+                "name" : "Filipe Linhares",
+                "job" : "Developer"
+            },
+            "fourth" : {
+                "name" : "Tchales Junior",
+                "job" : "Customer Support"
+            }
+        },
+        "OurMission" : "Our mission is to empower teams to reflect on their way of working. And to continuously become better in what they do",
+        "KeepInTuch" : "Keep in touch"
     }
 }
