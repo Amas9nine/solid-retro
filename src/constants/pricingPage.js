@@ -10,7 +10,8 @@ export const pricing = [
     surveys: 1,
     unlimitedTeam: "pricing.no",
     unlimitedTeamMem: "pricing.no",
-    start: "pricing.priceCard.start"
+    start: "pricing.priceCard.start",
+    id: 1
   },
   {
     whatFor: "pricing.priceCard.whatFor.team",
@@ -23,7 +24,8 @@ export const pricing = [
     surveys: "pricing.priceCard.unlimited",
     unlimitedTeam: "pricing.yes",
     unlimitedTeamMem: "pricing.yes",
-    start: "pricing.priceCard.freeStart"
+    start: "pricing.priceCard.freeStart",
+    id: 2
   },
   {
     whatFor: "pricing.priceCard.whatFor.business",
@@ -37,7 +39,8 @@ export const pricing = [
     unlimitedTeam: "pricing.yes",
     unlimitedTeamMem: "pricing.yes",
     start: "pricing.priceCard.freeStart",
-    popular: "pricing.popular"
+    popular: "pricing.popular",
+    id: 3
   },
   {
     whatFor: "pricing.priceCard.whatFor.enterprice",
@@ -50,6 +53,7 @@ export const pricing = [
     surveys: "pricing.priceCard.unlimited",
     unlimitedTeam: "pricing.yes",
     unlimitedTeamMem: "pricing.yes",
-    start: "pricing.priceCard.freeStart"
+    start: "pricing.priceCard.freeStart",
+    id: 4
   }
 ];

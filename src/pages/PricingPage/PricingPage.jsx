@@ -35,7 +35,7 @@ export default function PricingPage() {
           <div className={head ? css.seventh : css.activeSeven}></div>
         </div>
         {pricing.map((item) => (
-          <div className={item.popular ? css.popular : css.PriceTable}>
+          <div key={item.id} className={item.popular ? css.popular : css.PriceTable}>
             <div className={css.tableHeader}>{t(item.popular)}</div>
             <div className={css.first}>
               <span className={css.tag}>{t(item.whatFor)}</span>
