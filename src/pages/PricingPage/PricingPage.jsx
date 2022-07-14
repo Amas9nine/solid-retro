@@ -32,7 +32,7 @@ export default function PricingPage() {
           <div className={css.fourth}>{t("pricing.priceList.surveys")}</div>
           <div className={css.fifth}>{t("pricing.priceList.unlimited")}</div>
           <div className={css.sixth}>{t("pricing.priceList.unlimitedTeam")}</div>
-          <div className={css.seventh}></div>
+          <div className={head ? css.seventh : css.activeSeven}></div>
         </div>
         {pricing.map((item) => (
           <div className={item.popular ? css.popular : css.PriceTable}>
