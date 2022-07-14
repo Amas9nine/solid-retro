@@ -11,13 +11,19 @@ export default function RegisterPage() {
       />
       <div className={css.main}>
         <h5>{t("register.register")}</h5>
-        <label htmlFor="">{t("register.name")}</label>
-        <input type="text" placeholder={t("register.name")} />
-        <label htmlFor="Email">{t("register.email")} </label>
-        <input type="email" placeholder={t("register.placeholder_email")} />
-        <label htmlFor="Email">{t("register.password")} </label>
-        <input type="password" placeholder={t("register.placeholder_password")} />
-        <p> {t("register.p")}</p>
+        <label>
+          {t("register.name")}
+          <input type="text" placeholder={t("register.name")} />
+        </label>
+        <label>
+          {t("register.email")}
+          <input type="email" placeholder={t("register.placeholder_email")} />
+        </label>
+        <label>
+          {t("register.password")}
+          <input type="password" placeholder={t("register.placeholder_password")} />
+        </label>
+        <p> {t("register.paragraph")}</p>
         <div className={css.checkbox}>
           <input type="checkbox" />
           <span>
@@ -31,11 +37,10 @@ export default function RegisterPage() {
           <input type="checkbox" />
           <span>{t("register.checkbox2")} </span>
         </div>
-        <br />
-        <button className={css.createAc}>{t("register.create_account")}</button> <br />
+        <button className={css.createAc}>{t("register.create_account")}</button>
         <button className={css.signInBtn}>
           <img src="./images/registerPage/google_icon.png" alt="google icon" />
-          <span>{t("register.sign_in")}</span> <br />
+          <span>{t("register.sign_in")}</span>
         </button>
         <hr />
         <span className={css.spanAccount}>
