@@ -23,7 +23,7 @@ export default function RegisterPage() {
           {t("register.password")}
           <input type="password" placeholder={t("register.placeholder_password")} />
         </label>
-        <p> {t("register.paragraph")}</p>
+        <p> {t("register.password_requirements")}</p>
         <div className={css.checkbox}>
           <input type="checkbox" />
           <span>

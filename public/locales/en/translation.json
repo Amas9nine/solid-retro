@@ -61,7 +61,7 @@
         "placeholder_email": "Your email",
         "password": "Password",
         "placeholder_password": "Type your password",
-        "paragraph": "Should contain at least 8 chars, 1 number, 1 uppercase and 1 lowercase.",
+        "password_requirements": "Should contain at least 8 chars, 1 number, 1 uppercase and 1 lowercase.",
         "checkbox": "By signing up you agree to our and ",
         "terms": "Terms",
         "and": "and",
