@@ -1,15 +1,16 @@
 @media (max-width: 768px) {
     .main {
         font-size: 14px;
-        max-width: 330px;
+        max-width: 90%;
         margin: 0 auto;
+        height: fit-content;
     }
 }
 
 @media (max-width: 576px) {
     .main {
         font-size: 14px;
-        max-width: 300px;
+        max-width: 80%;
         margin: 0 auto;
         p{
             font-size: 10px;
