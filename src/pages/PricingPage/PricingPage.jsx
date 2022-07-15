@@ -10,7 +10,7 @@ export default function PricingPage() {
   return (
     <Container>
       <div className={css.sectionHeader}>
-        <h1>{head ? <h1>{t("pricing.TryEasy")}</h1> : <h1>{t("pricing.TwoMounth")}</h1>}</h1>
+        {head ? <h1>{t("pricing.TryEasy")}</h1> : <h1>{t("pricing.TwoMounth")}</h1>}
         <div className={css.toggleHeader}>
           <span>{t("pricing.Showannual")}</span>
           <div className={css.toggleBox}>
