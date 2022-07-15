@@ -5,9 +5,10 @@
   align-items: center;
   margin: 0 auto;
   justify-content: space-between;
-  
+
   h1 {
     color: #3e3e52;
+    font-family: Manrope, sans-serif;
     font-weight: bold;
     font-size: 20px;
     line-height: 24px;
@@ -85,234 +86,38 @@
 
 .sectionMain {
   width: 100%;
-.sectionMain::-webkit-scrollbar {
-    width: 0;
-    color: white;
-  }
-
-  @include breackpoint(lg) {
-    overflow-x: auto;
-    .table {
-      .seventh {
-        height: 222px;
-      }
-    }
-  }
-
-  @include breackpoint(sm) {
-    overflow-x: auto;
-    overflow-y: hidden;
-    .table {
-      .seventh {
-        height: 220px;
-      }
-    }
-  }
   display: flex;
-
-  .tag {
-    margin-bottom: 16px;
-    background: rgba(255, 255, 255, 0.08);
-    font-weight: 400;
-    padding: 4px 8px;
-    border-radius: 72px;
-  }
-
-  .table {
-    background-color: #145cf2;
-
-    .tableHeader {
-      padding-bottom: 16px;
-      background: white;
-    }
-
-    .startBtn {
-      margin: 8px;
-      padding: 16px;
-      background-color: #ffb800;
-      color: #3e3e52;
-      display: inline-flex;
-      border: 1px solid transparent;
-      font-weight: 700;
-    }
-
-    div {
-      padding: 16px 20px;
-      font-size: 14px;
-      color: white;
-    }
-    .activeFirst{
-      background-color: #145cf2;
-      min-height: 208px;
-      width: 220px;
-      border-right: #094ddf 1px solid;
-    }
-    .activeSeven{
-      height: 103px;
-      background-color: #145cf2;
-      border-right: #094ddf 1px solid;
-    }
-
-    .first {
-      background-color: #145cf2;
-      min-height: 150px;
-      width: 220px;
-      border-right: #094ddf 1px solid;
-
-      .tag {
-        margin-bottom: 16px;
-        background: rgba(255, 255, 255, 0.08);
-        font-weight: 400;
-        padding: 4px 8px;
-        border-radius: 72px;
-      }
-
-      span {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-    .second {
-      background-color: #094ddf;
-      border-right: #094ddf 1px solid;
-    }
-
-    .thirth {
-      background-color: #145cf2;
-      border-right: #094ddf 1px solid;
-    }
-
-    .fourth {
-      background-color: #094ddf;
-      border-right: #094ddf 1px solid;
-    }
-
-    .fifth {
-      background-color: #145cf2;
-      border-right: #094ddf 1px solid;
-    }
-
-    .sixth {
-      background-color: #094ddf;
-      border-right: #094ddf 1px solid;
-    }
-
-    .seventh {
-      height: 103px;
-      background-color: #145cf2;
-      border-right: #094ddf 1px solid;
-    }
-
-  }
-
-  .PriceTable {
-    text-align: center;
-
-    .startBtn {
-      margin: 8px;
-      padding: 16px;
-      background-color: #ffb800;
-      color: #3e3e52;
-      display: inline-flex;
-      border: 1px solid transparent;
-      font-weight: 700;
-      &:hover{
-        background-color: #a97f13;
-      }
-    }
-
-    div {
-      padding: 16px 20px;
-      font-size: 14px;
+  justify-content: center;
+ 
+   
+    .sectionMain::-webkit-scrollbar {
+      width: 0;
       color: white;
     }
 
-    .first {
-      background-color: #145cf2;
-      min-height: 122px;
-      border-right: #094ddf 1px solid;
-
-      .tag {
-        margin-bottom: 16px;
-        background: rgba(255, 255, 255, 0.08);
-        font-weight: 400;
-        padding: 4px 8px;
-        border-radius: 72px;
-      }
-
-      span {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    @include breackpoint(lg) {
+      overflow-x: auto;
+      display: flex;
+      justify-content: start;
+      .table {
+        .seventh {
+          height: 222px;
+        }
       }
     }
 
-    .second {
-      background-color: #094ddf;
-      border-right: #094ddf 1px solid;
-    }
+    @include breackpoint(sm) {
+      overflow-x: auto;
+      overflow-y: hidden;
 
-    .thirth {
-      background-color: #145cf2;
-      border-right: #094ddf 1px solid;
-    }
-
-    .fourth {
-      background-color: #094ddf;
-      border-right: #094ddf 1px solid;
-    }
-
-    .fifth {
-      background-color: #145cf2;
-      border-right: #094ddf 1px solid;
-    }
-
-    .sixth {
-      background-color: #094ddf;
-      border-right: #094ddf 1px solid;
-    }
-
-    .seventh {
-      background-color: #145cf2;
-      border-right: #094ddf 1px solid;
-    }
-
-  }
-
-  .popular {
-    text-align: center;
-    outline: 3px solid #2cbc63;
-    padding: 0;
-    outline-offset: -3px;
-    margin-top: 11px;
-    height: fit-content;
-
-    .tableHeader {
-      background-color: #2cbc63;
-      padding: 0;
-    }
-
-    .startBtn {
-      margin: 8px;
-      padding: 16px;
-      background-color: #ffb800;
-      color: #3e3e52;
-      display: inline-flex;
-      border: 1px solid transparent;
-      font-weight: 700;
-      &:hover{
-        background-color: #a97f13;
+      .table {
+        .seventh {
+          height: 220px;
+        }
       }
     }
 
-    div {
-      padding: 16px 20px;
-      font-size: 14px;
-      color: white;
-    }
+    display: flex;
 
     .tag {
       margin-bottom: 16px;
@@ -322,48 +127,261 @@
       border-radius: 72px;
     }
 
-    .first {
+    .table {
       background-color: #145cf2;
-      min-height: 122px;
 
-      span {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+      .tableHeader {
+        padding-bottom: 16px;
+        background: white;
       }
+
+      .startBtn {
+        margin: 8px;
+        padding: 16px;
+        background-color: #ffb800;
+        color: #3e3e52;
+        display: inline-flex;
+        border: 1px solid transparent;
+        font-weight: 700;
+      }
+
+      div {
+        padding: 16px 20px;
+        font-size: 14px;
+        color: white;
+      }
+
+      .activeFirst {
+        background-color: #145cf2;
+        min-height: 208px;
+        width: 220px;
+        border-right: #094ddf 1px solid;
+      }
+
+      .activeSeven {
+        height: 103px;
+        background-color: #145cf2;
+        border-right: #094ddf 1px solid;
+      }
+
+      .first {
+        background-color: #145cf2;
+        min-height: 150px;
+        width: 220px;
+        border-right: #094ddf 1px solid;
+
+        .tag {
+          margin-bottom: 16px;
+          background: rgba(255, 255, 255, 0.08);
+          font-weight: 400;
+          padding: 4px 8px;
+          border-radius: 72px;
+        }
+
+        span {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .second {
+        background-color: #094ddf;
+        border-right: #094ddf 1px solid;
+      }
+
+      .thirth {
+        background-color: #145cf2;
+        border-right: #094ddf 1px solid;
+      }
+
+      .fourth {
+        background-color: #094ddf;
+        border-right: #094ddf 1px solid;
+      }
+
+      .fifth {
+        background-color: #145cf2;
+        border-right: #094ddf 1px solid;
+      }
+
+      .sixth {
+        background-color: #094ddf;
+        border-right: #094ddf 1px solid;
+      }
+
+      .seventh {
+        height: 103px;
+        background-color: #145cf2;
+        border-right: #094ddf 1px solid;
+      }
+
     }
 
-    .second {
-      background-color: #094ddf;
+    .PriceTable {
+      text-align: center;
+
+      .startBtn {
+        margin: 8px;
+        padding: 16px;
+        background-color: #ffb800;
+        color: #3e3e52;
+        display: inline-flex;
+        border: 1px solid transparent;
+        font-weight: 700;
+
+        &:hover {
+          background-color: #a97f13;
+        }
+      }
+
+      div {
+        padding: 16px 20px;
+        font-size: 14px;
+        color: white;
+      }
+
+      .first {
+        background-color: #145cf2;
+        min-height: 122px;
+        border-right: #094ddf 1px solid;
+
+        .tag {
+          margin-bottom: 16px;
+          background: rgba(255, 255, 255, 0.08);
+          font-weight: 400;
+          padding: 4px 8px;
+          border-radius: 72px;
+        }
+
+        span {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .second {
+        background-color: #094ddf;
+        border-right: #094ddf 1px solid;
+      }
+
+      .thirth {
+        background-color: #145cf2;
+        border-right: #094ddf 1px solid;
+      }
+
+      .fourth {
+        background-color: #094ddf;
+        border-right: #094ddf 1px solid;
+      }
+
+      .fifth {
+        background-color: #145cf2;
+        border-right: #094ddf 1px solid;
+      }
+
+      .sixth {
+        background-color: #094ddf;
+        border-right: #094ddf 1px solid;
+      }
+
+      .seventh {
+        background-color: #145cf2;
+        border-right: #094ddf 1px solid;
+      }
+
     }
 
-    .thirth {
-      background-color: #145cf2;
-    }
+    .popular {
+      text-align: center;
+      outline: 3px solid #2cbc63;
+      padding: 0;
+      outline-offset: -3px;
+      margin-top: 11px;
+      height: fit-content;
 
-    .fourth {
-      background-color: #094ddf;
-    }
+      .tableHeader {
+        background-color: #2cbc63;
+        padding: 0;
+      }
 
-    .fifth {
-      background-color: #145cf2;
-    }
+      .startBtn {
+        margin: 8px;
+        padding: 16px;
+        background-color: #ffb800;
+        color: #3e3e52;
+        display: inline-flex;
+        border: 1px solid transparent;
+        font-weight: 700;
 
-    .sixth {
-      background-color: #094ddf;
-    }
+        &:hover {
+          background-color: #a97f13;
+        }
+      }
 
-    .seventh {
-      background-color: #145cf2;
-    }
+      div {
+        padding: 16px 20px;
+        font-size: 14px;
+        color: white;
+      }
 
+      .tag {
+        margin-bottom: 16px;
+        background: rgba(255, 255, 255, 0.08);
+        font-weight: 400;
+        padding: 4px 8px;
+        border-radius: 72px;
+      }
+
+      .first {
+        background-color: #145cf2;
+        min-height: 122px;
+
+        span {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .second {
+        background-color: #094ddf;
+      }
+
+      .thirth {
+        background-color: #145cf2;
+      }
+
+      .fourth {
+        background-color: #094ddf;
+      }
+
+      .fifth {
+        background-color: #145cf2;
+      }
+
+      .sixth {
+        background-color: #094ddf;
+      }
+
+      .seventh {
+        background-color: #145cf2;
+      }
+
+    }
   }
-}
-.contactUs{
+
+
+
+.contactUs {
   text-align: center;
   margin: 24px 0;
-  a{
+
+  a {
     text-decoration: none;
     color: #145cf2;
   }
