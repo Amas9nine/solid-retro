@@ -6,10 +6,9 @@ import { pricing } from "../../constants/pricingPage";
 
 export default function PricingPage() {
   const [head, setHead] = useState(false);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
-    <>
-      <div className={css.backColor}></div>
+    <div className={css.wrapper}>
       <div className={css.background}></div>
       <Container>
         <div className={css.sectionHeader}>
@@ -71,7 +70,6 @@ export default function PricingPage() {
           <a href="">{t("pricing.contact")}</a>
         </span>
       </div>
-      <button onClick={() => i18n.changeLanguage("ru")}>trans</button>
-    </>
+    </div>
   );
 }
