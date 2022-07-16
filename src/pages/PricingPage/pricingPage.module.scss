@@ -115,7 +115,7 @@
   @include breackpoint(lg) {
     overflow-x: auto;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
 
     .table {
       .seventh {
