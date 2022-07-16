@@ -6,7 +6,7 @@ import { pricing } from "../../constants/pricingPage";
 
 export default function PricingPage() {
   const [head, setHead] = useState(false);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <>
       <div className={css.backColor}></div>
@@ -71,6 +71,7 @@ export default function PricingPage() {
           <a href="">{t("pricing.contact")}</a>
         </span>
       </div>
+      <button onClick={() => i18n.changeLanguage("ru")}>trans</button>
     </>
   );
 }
