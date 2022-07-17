@@ -225,30 +225,63 @@
         }
     },
     "about": {
-        "aboutUs" : "About Us",
-        "first" : "EasyRetro started as a side project from Glauber Ramos back in 2015 and now has grown to be the most used retrospective tool in the world according to Alexa.com.",
-        "second" : "- “I created as an open-source project to help my team to do better retrospectives. The board got famous inside the company and then many other companies started using it as well.”",
-        "thirth" :  "It's now used by thousands of companies worldwide, from small startups to Fortune 500 companies. It's used daily by thousands of people that want to improve the way they work and get better at what they do.",
-        "whoIs" : "Who is EasyRetro?",
+        "aboutUs": "About Us",
+        "first": "EasyRetro started as a side project from Glauber Ramos back in 2015 and now has grown to be the most used retrospective tool in the world according to Alexa.com.",
+        "second": "- “I created as an open-source project to help my team to do better retrospectives. The board got famous inside the company and then many other companies started using it as well.”",
+        "thirth": "It's now used by thousands of companies worldwide, from small startups to Fortune 500 companies. It's used daily by thousands of people that want to improve the way they work and get better at what they do.",
+        "whoIs": "Who is EasyRetro?",
         "devs": {
-            "first" : {
-                "name" : "Marco Araujo",
-                "job" : "Developer"
+            "first": {
+                "name": "Marco Araujo",
+                "job": "Developer"
             },
-            "second" : {
-                "name" : "Glauber Ramos",
-                "job" : "Founder"
+            "second": {
+                "name": "Glauber Ramos",
+                "job": "Founder"
             },
-            "thirth" : {
-                "name" : "Filipe Linhares",
-                "job" : "Developer"
+            "thirth": {
+                "name": "Filipe Linhares",
+                "job": "Developer"
             },
-            "fourth" : {
-                "name" : "Tchales Junior",
-                "job" : "Customer Support"
+            "fourth": {
+                "name": "Tchales Junior",
+                "job": "Customer Support"
             }
         },
-        "OurMission" : "Our mission is to empower teams to reflect on their way of working. And to continuously become better in what they do",
-        "KeepInTuch" : "Keep in touch"
+        "OurMission": "Our mission is to empower teams to reflect on their way of working. And to continuously become better in what they do",
+        "KeepInTuch": "Keep in touch"
+    },
+    "pricing": {
+        "TryEasy": "Try EasyRetro with a 7 day free trial",
+        "TwoMounth": "Two months for free with annual paid plans",
+        "Showannual": "Show annual plans",
+        "no": "No",
+        "yes": "Yes",
+        "priceList": {
+            "publick": "Public boards per month",
+            "number": "Number of teams",
+            "surveys": "Surveys per board",
+            "unlimited": "Unlimited team boards",
+            "unlimitedTeam": "Unlimited team members"
+        },
+        "priceCard": {
+            "whatFor": {
+                "free": "Free",
+                "team": "Team",
+                "business": "Business",
+                "enterprice": "Enterprice"
+            },
+            "per": "per month",
+            "unlimited":"Unlimited",
+            "start":"Start  now",
+            "freeStart":"Start free"
+        },
+        "popular":"Popular Plan",
+        "forMore":"For more teams please ",
+        "contact":"contact us ",
+        "first":{
+            "price":"$0",
+            "billed":"annual bill"
+        }
     }
 }
