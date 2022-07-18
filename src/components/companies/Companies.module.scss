@@ -1,0 +1,65 @@
+@media (max-width: 1200px){
+    .container .icons img{
+        margin-left: 30px;
+    }
+}
+@media (max-width: 992px){
+    .container .icons img{
+        margin-left: 15px;
+        width: 70px;
+    }
+    .container h2{
+        font-size: 24px;
+    }
+}
+@media (max-width: 768px){
+    .container h2{
+        font-size: 20px;
+    }
+    .icons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.global{
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div h2{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #334357;
+    margin-bottom: 15px;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+.intercomIcon{
+    height: 28px;
+    margin-left: 60px;
+    margin-top: 35px;
+}
+.vividseatsIcon{
+    height: 20px;
+    margin-left: 60px;
+    margin-top: 35px;
+}
+.xingIcon{
+    height: 40px;
+    margin-left: 60px;
+    margin-top: 25px;
+}
+.ambienzIcon{
+    height: 35px;
+    margin-left: 60px;
+    margin-top: 35px;
+}
