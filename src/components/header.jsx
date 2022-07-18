@@ -1,63 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 import scss from "./header.module.scss";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { Container } from "react-bootstrap";
 const Header = () => {
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(false);
+  const { t, i18n } = useTranslation();
+  const [language, setLanguage] = useState(i18n.language);
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    setLanguage(lang);
+    setActive(false);
+  };
   return (
-    // <div className="container">
-    //   <div className={scss.container}>
-    //     <div className={scss.img}>
-    //       <img src="https://easyretro.io/_nuxt/e467cce5c7f784bb97bef20dd03e50fa.svg" alt="" />
-    //     </div>
-    //     <div className={scss.about}>
-    //       <ul className="nav">
-    //         <li className="nav-item">
-    //           <a className="nav-link active" aria-current="page" href="#">
-    //             About
-    //           </a>
-    //         </li>
-    //         <li className="nav-item">
-    //           <a className="nav-link" href="#">
-    //             Pricing
-    //           </a>
-    //         </li>
-    //         <li className="nav-item">
-    //           <a className="nav-link" href="#">
-    //             Features
-    //           </a>
-    //         </li>
-    //         <li className="nav-item">
-    //           <a className="nav-link">Login</a>
-    //         </li>
-    //         <li className="nav-item">
-    //           <a className="nav-link" href="#">
-    //             Register
-    //           </a>
-    //         </li>
-    //       </ul>
-    //       <select>
-    //         <option value="">EN</option>
-    //         <option value="">RU</option>
-    //       </select>
-    //     </div>
-    //   </div>
-    // </div>
-    <div className="container">
-      <section class={scss.top_nav}>
-        <div className={scss.img}>
-          <img src="/images/header/logo.svg" alt="" />
-        </div>
-        <input id={scss.menu_toggle} type="checkbox" />
-        <label class={scss.menu_button_container} for={scss.menu_toggle}>
-          <div class={scss.menu_button}></div>
-        </label>
-        <ul class={scss.menu}>
-          <li>About</li>
-          <li>Pricing</li>
-          <li>Features</li>
-          <li>Login</li>
-          <li>Register</li>
-        </ul>
-      </section>
-    </div>
+    <>
+      <Container>
+        <section class={scss.top_nav}>
+          <Link to="/" className={scss.img}>
+            <img src="/images/header/logo.svg" alt="" />
+          </Link>
+          <div className={scss.right + " " + (i18n.language === "ru" ? scss.active : "")}>
+            <label
+              class={scss.menu_button_container + " " + (open ? scss.active : "")}
+              onClick={() => setOpen(!open)}
+            >
+              <div class={scss.menu_button}></div>
+            </label>
+
+            <div class={scss.menu}>
+              <div className={scss.nav}>
+                <Link to="/about">{t("header.about")}</Link>
+                <Link to="/pricing">{t("header.pricing")}</Link>
+                <Link to="/features">{t("header.features")}</Link>
+                <Link to="/login">{t("header.login")}</Link>
+                <Link to="/register">{t("header.register")}</Link>
+              </div>
+              <div class={scss.dropdown}>
+                <div class={scss.dropdown_select}>
+                  <span class={scss.select} onClick={() => setActive(!active)}>
+                    {language}
+                  </span>
+                </div>
+                <div class={scss.dropdown_list + " " + (active ? scss.active : "")}>
+                  <div className={scss.dropdown_list__item} onClick={() => changeLanguage("en")}>
+                    ENGLISH
+                  </div>
+                  <div className={scss.dropdown_list__item} onClick={() => changeLanguage("ru")}>
+                    RUSSIA
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Container>
+      <div className={scss.modal + " " + (open ? scss.active : "")}>
+        <Link to="/about">{t("header.about")}</Link>
+        <Link to="/pricing">{t("header.pricing")}</Link>
+        <Link to="/features">{t("header.features")}</Link>
+        <Link to="/login">{t("header.login")}</Link>
+        <Link to="/register">{t("header.register")}</Link>
+      </div>
+    </>
   );
 };
 
