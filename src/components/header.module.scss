@@ -24,7 +24,7 @@
 }
 .nav{
   display: flex;
-  grid-gap: 15px;
+  grid-gap: 10px;
   height: 100%;
   align-items: center;
 }
@@ -208,6 +208,9 @@
         width: 20%;
       }
     }
+    .dropdown_list{
+      left: -20px !important;
+    }
   }
 
 
@@ -233,6 +236,7 @@
   .dropdown_list.active{
     opacity: 1;
     visibility: visible;
+  
   }
   .dropdown_select{
     padding: 1.5em;
