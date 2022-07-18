@@ -1,0 +1,106 @@
+@import "../../Components//globalVariables.scss";
+
+.cards {
+  .left {
+    display: flex;
+    align-items: center;
+    grid-gap: 60px;
+    margin: 60px 0;
+    @include breackpoint(lg){
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+    @include breackpoint(sm){
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    img {
+      width: 550px;
+      @include breackpoint(lg){
+        width: fit-content;
+      }
+      @include breackpoint(sm){
+        width: 300px;
+      }
+    }
+    .content { 
+      @include breackpoint(lg){
+        width: 500px;
+      }
+      @include breackpoint(sm){
+        width: 250px;
+      }
+      h2 {
+        display: block;
+        max-width: 100%;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 1em;
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+      p {
+        display: block;
+        max-width: 800px;
+        margin: 30px auto;
+        font-size: 18px;
+        line-height: 1.7em;
+        color: #333;
+      }
+    }
+  }
+}
+
+.cards {
+  .right {
+    @include breackpoint(lg){
+      flex-direction: column;
+      text-align: center;
+    }
+    @include breackpoint(sm){
+      flex-direction: column;
+      text-align: center;
+    }
+    display: flex;
+    align-items: center;
+    grid-gap: 60px;
+    margin: 60px 0;
+    justify-content: space-between;
+    img {
+      width: 550px;
+      @include breackpoint(lg){
+        width: fit-content;
+      }
+      @include breackpoint(sm){
+        width: 300px;
+      }
+    }
+    .content { 
+      @include breackpoint(lg){
+        width: 500px;
+      }
+      @include breackpoint(sm){
+        width: 250px;
+      }
+      
+      h2 {
+        display: block;
+        max-width: 100%;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 1em;
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+      p {
+        display: block;
+        max-width: 800px;
+        margin: 30px auto;
+        font-size: 18px;
+        line-height: 1.7em;
+        color: #333;
+      }
+    }
+  }
+}

@@ -1,0 +1,288 @@
+@import "./variables";
+@import "../globalVariables.scss";
+
+.retrospective {
+  width: 100%;
+  margin: 60px 0;
+  font-size: 40px;
+  color: #334357;
+  text-align: center;
+  font-family: Manrope, sans-serif;
+  font-weight: 600;
+
+  @include breackpoint(lg) {
+    width: 100%;
+  }
+
+  @include breackpoint(sm) {
+    width: 100%;
+    margin: 45px auto;
+  }
+
+}
+
+.WhatIsAFun {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  grid-gap: 25px;
+
+  @include breackpoint(lg) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .left {
+    width: 50%;
+
+    @include breackpoint(lg) {
+      width: 100%;
+      display: block;
+    }
+
+    img {
+      width: 100%;
+
+      @include breackpoint(lg) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @include breackpoint(sm) {
+        width: 100%;
+      }
+
+      margin-bottom: 20px;
+      border-radius: 3px;
+      box-shadow: 0 4px 20px 0 rgb(0 0 0 / 10%);
+    }
+  }
+
+  .right {
+    width: 50%;
+
+    @include breackpoint(lg) {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    p {
+      display: block;
+      max-width: 800px;
+
+      margin: {
+        top: 0;
+        right: auto;
+        bottom: 30px;
+        left: auto;
+      }
+
+      font-size: 18px;
+      line-height: 1.7em;
+      color: #333;
+    }
+
+    ul {
+      max-width: 1000px;
+      margin: 30px auto 50px;
+      display: block;
+
+      li {
+        margin: 10px 50px;
+        font-size: 18px;
+        color: #333;
+      }
+    }
+
+  }
+
+}
+
+.WhatPeople {
+  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 20px 25px;
+  margin: 60px 0;
+
+  @include breackpoint(lg) {
+    grid-template-columns: 250px 250px;
+    gap: 15px 15px;
+    justify-content: center;
+
+    .card {
+      padding: 0;
+      gap: 0;
+    }
+
+    @include breackpoint(sm) {
+      grid-template-columns: 350px;
+    }
+  }
+
+  .card {
+    padding: 18px;
+    border: 1px solid #dce3f1;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgb(62 62 82 / 10%);
+    gap: 32px;
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+      }
+
+      .blockName {
+        h2 {
+          margin: 0;
+          font-size: 17px;
+          line-height: 18px;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 15px;
+          font-weight: 400;
+          color: #8c8c9e;
+        }
+      }
+    }
+
+    .data {
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: 500;
+      color: #8c8c9e;
+      margin-top: 18px;
+    }
+  }
+}
+
+.clickhere {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+  @include breackpoint(lg){
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  @include breackpoint(sm){
+    padding: 0;
+    margin-bottom: 25px;
+  }
+ 
+  span {
+    font-size: 18px;
+    line-height: 1.7em;
+    color: #333;
+  }
+
+  @include breackpoint(lg) {
+    padding: 0;
+  }
+
+  @include breackpoint(sm) {
+    padding: 0;
+  }
+  a {
+    font-size: 18px;
+    line-height: 1.7em;
+    color: #145cf2;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.gettingStarted {
+  padding: 50px 0 70px;
+  background: #f8fafe;
+
+  .link {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  @include title(36px);
+
+  @include breackpoint(sm) {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.whatBenefits {
+  @include title(36px);
+
+  @include breackpoint(sm) {
+    padding: 15px;
+  }
+}
+
+.cards {
+  ul {
+    @include breackpoint(lg) {
+      padding: 0;
+      margin: 0;
+    }
+
+    display: flex;
+    grid-gap: 20px;
+    gap: 20px;
+    list-style: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    @include cards
+  }
+}
+
+.receive {
+  padding: 70px 0;
+  @include title(40px);
+
+  @include breackpoint(lg) {
+    @include title(22px)
+  }
+}
+
+
+.center {
+  text-align: center;
+  margin-top: 50px;
+
+  a {
+    border: #145cf2 1px solid;
+    color: #145cf2;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 16px 40px;
+    font-weight: 700;
+    border-radius: 2px;
+    text-decoration: none;
+    font-family: Manrope, sans-serif;
+    display: inline-flex;
+
+    &:hover {
+      color: #fff;
+      background: #145cf2;
+    }
+  }
+
+}
