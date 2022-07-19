@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 export default function LoginPage() {
   const { t } = useTranslation();
   return (
-    <form className={css.global}>
+    <div className={css.global}>
       <img
         className={css.easy_retro}
         src="./images/registerPage/easy_retro_logo.svg"
@@ -33,6 +33,6 @@ export default function LoginPage() {
           <a href=""> {t("login.register")}</a>
         </div>
       </div>
-    </form>
+    </div>
   );
 }
