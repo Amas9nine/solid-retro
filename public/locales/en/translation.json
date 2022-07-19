@@ -4,6 +4,13 @@
         "part1": "To get started , edit <1>src/App.js</1> and saveto reload  ",
         "part2": "Switch language between english and german using buttons above. "
     },
+    "header": {
+        "about": "About",
+        "pricing": "Pricing",
+        "features": "Features",
+        "login": "Login",
+        "register": "Register"
+        },
     "componies": "Join a thousands of other companies to improve your team",
     "GetStartedForFree": "Get Started For Free",
     "footer": {
