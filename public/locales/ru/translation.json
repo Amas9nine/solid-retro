@@ -67,7 +67,7 @@
         "email_placeholder": "Ваша почта",
         "reset_password_btn": "Сбросить мой пароль",
         "or": "Или",
-        "back_to_login": "Вернуться в страницу входа"
+        "back_to_login": "Вернуться на страницу входа"
     },
     "register":{
         "register": "Зарегистрироваться",
