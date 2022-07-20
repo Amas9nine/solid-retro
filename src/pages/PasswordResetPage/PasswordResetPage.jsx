@@ -21,7 +21,7 @@ export default function PasswordResetPage() {
         <hr />
         <span className={css.back_to_login}>
           {t("password.or")}
-          <Link to="/"> {t("password.back_to_login")}</Link>
+          <Link to="/login"> {t("password.back_to_login")}</Link>
         </span>
       </div>
     </Form>
