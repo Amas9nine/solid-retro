@@ -79,6 +79,17 @@
         "account": "Already have an account?",
         "login": "Login"
     },
+    "login":{
+        "login": "Login",
+        "email": "Email",
+        "placeholder_email": "Your email",
+        "password": "Password",
+        "login_btn": "Login",
+        "sign_in_btn": "Sign in with Google",
+        "forgot_password": "Forgot password?",
+        "account": "Don't have an account?",
+        "register": "Register"
+    },
     "jumbotron": {
         "title": "Improve with Fun Sprint Retrospectives",
         "paragraph": "Collaborate with your remote team and get better at what you do with a simple, intuitive and beautiful tool",
