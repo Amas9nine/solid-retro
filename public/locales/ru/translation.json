@@ -61,6 +61,14 @@
             "Contact": "Свяжись с Нами"
         }
     },
+    "password":{
+        "password_reset_title": "Сброс пароля",
+        "email": "Почта",
+        "email_placeholder": "Ваша почта",
+        "reset_password_btn": "Сбросить мой пароль",
+        "or": "Или",
+        "back_to_login": "Вернуться в страницу входа"
+    },
     "register":{
         "register": "Зарегистрироваться",
         "name": "Имя",
