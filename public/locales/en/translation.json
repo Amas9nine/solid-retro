@@ -61,6 +61,14 @@
             "Contact": "Contact Us"
         }
     },
+    "password":{
+        "password_reset_title": "Password reset",
+        "email": "Email",
+        "email_placeholder": "Your email",
+        "reset_password_btn": "Reset my password",
+        "or": "Or",
+        "back_to_login": "Back to Login"
+    },
     "register":{
         "register": "Register",
         "name": "Name",

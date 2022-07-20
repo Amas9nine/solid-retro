@@ -6,6 +6,7 @@ import FeaturesPage from "./pages/FeaturesPage/FeaturesPage";
 import Aboutpage from "./pages/AboutPage/AboutPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import PricingPage from "./pages/PricingPage/PricingPage";
+import PasswordResetPage from "./pages/PasswordResetPage/PasswordResetPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/about" element={<Aboutpage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/password" element={<PasswordResetPage />} />
       </Routes>
     </BrowserRouter>
   );
