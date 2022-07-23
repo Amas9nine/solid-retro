@@ -1,7 +1,31 @@
 import css from "./RegisterPage.module.scss";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import firebase from "firebase/compat/app";
 export default function RegisterPage() {
   const { t } = useTranslation();
+  const [credintials, setCredintials] = useState({ email: "", name: "", password: "" });
+  const auth = firebase.auth();
+  const handleSignUpRequest = (e) => {
+    e.preventDefault();
+    auth
+      .createUserWithEmailAndPassword(credintials.email, credintials.password)
+      .then((userCredentials) => {
+        const user = userCredentials.user;
+        alert("User Created ");
+        console.log(user);
+      })
+      .catch(() => {
+        alert("your account already created");
+      });
+  };
+  const handleUserInputChange = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setCredintials((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
   return (
     <div className={css.global}>
       <img
@@ -13,15 +37,33 @@ export default function RegisterPage() {
         <h5>{t("register.register")}</h5>
         <label>
           {t("register.name")}
-          <input type="text" placeholder={t("register.name")} />
+          <input
+            type="text"
+            placeholder={t("register.name")}
+            name="name"
+            value={credintials.name}
+            onChange={handleUserInputChange}
+          />
         </label>
         <label>
           {t("register.email")}
-          <input type="email" placeholder={t("register.placeholder_email")} />
+          <input
+            type="email"
+            placeholder={t("register.placeholder_email")}
+            name="email"
+            value={credintials.email}
+            onChange={handleUserInputChange}
+          />
         </label>
         <label>
           {t("register.password")}
-          <input type="password" placeholder={t("register.placeholder_password")} />
+          <input
+            type="password"
+            placeholder={t("register.placeholder_password")}
+            name="password"
+            value={credintials.password}
+            onChange={handleUserInputChange}
+          />
         </label>
         <p> {t("register.password_requirements")}</p>
         <div className={css.checkbox}>
@@ -37,7 +79,9 @@ export default function RegisterPage() {
           <input type="checkbox" />
           <span>{t("register.checkbox2")} </span>
         </div>
-        <button className={css.createAc}>{t("register.create_account")}</button>
+        <button onClick={handleSignUpRequest} className={css.createAc}>
+          {t("register.create_account")}
+        </button>
         <button className={css.signInBtn}>
           <img src="./images/registerPage/google_icon.png" alt="google icon" />
           <span>{t("register.sign_in")}</span>
