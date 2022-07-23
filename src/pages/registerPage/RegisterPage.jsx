@@ -1,5 +1,6 @@
 import css from "./RegisterPage.module.scss";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 export default function RegisterPage() {
   const { t } = useTranslation();
   return (
@@ -9,19 +10,19 @@ export default function RegisterPage() {
         src="./images/registerPage/easy_retro_logo.svg"
         alt="easy retro logo"
       />
-      <div className={css.main}>
+      <form className={css.main}>
         <h5>{t("register.register")}</h5>
         <label>
           {t("register.name")}
-          <input type="text" placeholder={t("register.name")} />
+          <input type="text" placeholder={t("register.name")} required />
         </label>
         <label>
           {t("register.email")}
-          <input type="email" placeholder={t("register.placeholder_email")} />
+          <input type="email" placeholder={t("register.placeholder_email")} required />
         </label>
         <label>
           {t("register.password")}
-          <input type="password" placeholder={t("register.placeholder_password")} />
+          <input type="password" placeholder={t("register.placeholder_password")} required />
         </label>
         <p> {t("register.password_requirements")}</p>
         <div className={css.checkbox}>
@@ -45,9 +46,9 @@ export default function RegisterPage() {
         <hr />
         <span className={css.spanAccount}>
           {t("register.account")}
-          <a href=""> {t("register.login")}</a>
+          <Link to="/login"> {t("register.login")}</Link>
         </span>
-      </div>
+      </form>
     </div>
   );
 }
