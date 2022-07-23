@@ -7,8 +7,6 @@ import Aboutpage from "./pages/AboutPage/AboutPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import PricingPage from "./pages/PricingPage/PricingPage";
 import PasswordResetPage from "./pages/PasswordResetPage/PasswordResetPage";
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
   return (
