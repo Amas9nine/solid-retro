@@ -2,10 +2,12 @@ import css from "./RegisterPage.module.scss";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import firebase from "firebase/compat/app";
+import { Link } from "react-router-dom";
 export default function RegisterPage() {
   const { t } = useTranslation();
   const [credintials, setCredintials] = useState({ email: "", name: "", password: "" });
   const auth = firebase.auth();
+  const [err, setErr] = useState(false);
   const handleSignUpRequest = (e) => {
     e.preventDefault();
     auth
@@ -14,9 +16,22 @@ export default function RegisterPage() {
         const user = userCredentials.user;
         alert("User Created ");
         console.log(user);
+        user
+          .updateProfile({
+            displayName: credintials.name
+          })
+          .then(() => {
+            console.log("user profile updated");
+            console.log(user);
+            user.sendEmailVerification();
+            console.log("verificated");
+          })
+          .catch((err) => {
+            console.log(err.message);
+          });
       })
       .catch(() => {
-        alert("your account already created");
+        setErr(true);
       });
   };
   const handleUserInputChange = (e) => {
@@ -25,6 +40,18 @@ export default function RegisterPage() {
     setCredintials((prev) => {
       return { ...prev, [name]: value };
     });
+  };
+  const signUpwithGoogle = () => {
+    let google_provider = new firebase.auth.GoogleAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(google_provider)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <div className={css.global}>
@@ -35,6 +62,13 @@ export default function RegisterPage() {
       />
       <div className={css.main}>
         <h5>{t("register.register")}</h5>
+        {err ? (
+          <div className={css.error}>
+            <p>{t("errorMassage")}</p>
+          </div>
+        ) : (
+          ""
+        )}
         <label>
           {t("register.name")}
           <input
@@ -51,6 +85,7 @@ export default function RegisterPage() {
             type="email"
             placeholder={t("register.placeholder_email")}
             name="email"
+            onClick={() => setErr(false)}
             value={credintials.email}
             onChange={handleUserInputChange}
           />
@@ -82,14 +117,14 @@ export default function RegisterPage() {
         <button onClick={handleSignUpRequest} className={css.createAc}>
           {t("register.create_account")}
         </button>
-        <button className={css.signInBtn}>
+        <button onClick={signUpwithGoogle} className={css.signInBtn}>
           <img src="./images/registerPage/google_icon.png" alt="google icon" />
           <span>{t("register.sign_in")}</span>
         </button>
         <hr />
         <span className={css.spanAccount}>
           {t("register.account")}
-          <a href=""> {t("register.login")}</a>
+          <Link to="/login"> {t("register.login")}</Link>
         </span>
       </div>
     </div>
