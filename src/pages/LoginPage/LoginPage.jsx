@@ -26,7 +26,7 @@ export default function LoginPage() {
           <span>{t("login.sign_in_btn")}</span>
         </button>
         <div className={css.forgot_password}>
-          <Link to="">{t("login.forgot_password")}</Link>
+          <Link to="/password">{t("login.forgot_password")}</Link>
         </div>
         <hr />
         <div className={css.register}>

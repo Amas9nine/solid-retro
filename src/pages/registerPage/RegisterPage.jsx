@@ -55,7 +55,7 @@ export default function RegisterPage() {
         src="./images/registerPage/easy_retro_logo.svg"
         alt="easy retro logo"
       />
-      <div className={css.main}>
+      <form className={css.main}>
         <h5>{t("register.register")}</h5>
         {err ? (
           <div className={css.error}>
@@ -95,6 +95,15 @@ export default function RegisterPage() {
             value={credintials.password}
             onChange={handleUserInputChange}
           />
+          <input type="text" placeholder={t("register.name")} required />
+        </label>
+        <label>
+          {t("register.email")}
+          <input type="email" placeholder={t("register.placeholder_email")} required />
+        </label>
+        <label>
+          {t("register.password")}
+          <input type="password" placeholder={t("register.placeholder_password")} required />
         </label>
         {credintials.password.length < 8 ? (
           <p id={css.formErr}>{t("register.password_requirements")}</p>
@@ -130,7 +139,7 @@ export default function RegisterPage() {
           {t("register.account")}
           <Link to="/login"> {t("register.login")}</Link>
         </span>
-      </div>
+      </form>
     </div>
   );
 }
