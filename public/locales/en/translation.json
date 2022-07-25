@@ -310,5 +310,7 @@
             "billed":"annual bill"
         }
     },
-    "errorMassage": "Registration failed. Please check if you are already registered"
+    "errorMassage": "Registration failed. Please check if you are already registered",
+    "nameLo":"Name should be longer",
+    "email": "Email should contain @"
 }
