@@ -14,17 +14,14 @@ export default function RegisterPage() {
       .createUserWithEmailAndPassword(credintials.email, credintials.password)
       .then((userCredentials) => {
         const user = userCredentials.user;
-        alert("User Created ");
         console.log(user);
         user
           .updateProfile({
             displayName: credintials.name
           })
           .then(() => {
-            console.log("user profile updated");
             console.log(user);
             user.sendEmailVerification();
-            console.log("verificated");
           })
           .catch((err) => {
             console.log(err.message);
