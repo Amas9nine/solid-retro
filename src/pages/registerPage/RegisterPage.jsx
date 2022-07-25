@@ -66,6 +66,7 @@ export default function RegisterPage() {
         ) : (
           ""
         )}
+
         <label>
           {t("register.name")}
           <input
@@ -97,7 +98,11 @@ export default function RegisterPage() {
             onChange={handleUserInputChange}
           />
         </label>
-        <p> {t("register.password_requirements")}</p>
+        {credintials.password.length < 8 ? (
+          <p id={css.formErr}>{t("register.password_requirements")}</p>
+        ) : (
+          ""
+        )}
         <div className={css.checkbox}>
           <input type="checkbox" />
           <span>
@@ -111,9 +116,13 @@ export default function RegisterPage() {
           <input type="checkbox" />
           <span>{t("register.checkbox2")} </span>
         </div>
-        <button onClick={handleSignUpRequest} className={css.createAc}>
-          {t("register.create_account")}
-        </button>
+        {credintials.password.length < 8 ? (
+          <button className={css.createAV}>{t("register.create_account")}</button>
+        ) : (
+          <button onClick={handleSignUpRequest} className={css.createAc}>
+            {t("register.create_account")}
+          </button>
+        )}
         <button onClick={signUpwithGoogle} className={css.signInBtn}>
           <img src="./images/registerPage/google_icon.png" alt="google icon" />
           <span>{t("register.sign_in")}</span>
