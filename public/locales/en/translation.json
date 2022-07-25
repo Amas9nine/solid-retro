@@ -309,5 +309,6 @@
             "price":"$0",
             "billed":"annual bill"
         }
-    }
+    },
+    "errorMassage": "Registration failed. Please check if you are already registered"
 }
