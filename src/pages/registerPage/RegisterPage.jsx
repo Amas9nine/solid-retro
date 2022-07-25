@@ -64,7 +64,6 @@ export default function RegisterPage() {
         ) : (
           ""
         )}
-
         <label>
           {t("register.name")}
           <input
@@ -95,15 +94,6 @@ export default function RegisterPage() {
             value={credintials.password}
             onChange={handleUserInputChange}
           />
-          <input type="text" placeholder={t("register.name")} required />
-        </label>
-        <label>
-          {t("register.email")}
-          <input type="email" placeholder={t("register.placeholder_email")} required />
-        </label>
-        <label>
-          {t("register.password")}
-          <input type="password" placeholder={t("register.placeholder_password")} required />
         </label>
         {credintials.password.length < 8 ? (
           <p id={css.formErr}>{t("register.password_requirements")}</p>
