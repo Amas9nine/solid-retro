@@ -1,8 +1,23 @@
 import css from "./LoginPage.module.scss";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 export default function LoginPage() {
   const { t } = useTranslation();
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
+  const auth = getAuth();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, pass)
+      .then((userCredential) => {
+        console.log(userCredential.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className={css.global}>
       <img
@@ -10,15 +25,27 @@ export default function LoginPage() {
         src="./images/registerPage/easy_retro_logo.svg"
         alt="easy retro logo"
       />
-      <form className={css.main}>
+      <form className={css.main} onSubmit={handleSubmit}>
         <h5>{t("login.login")}</h5>
         <label>
           {t("login.email")}
-          <input type="email" placeholder={t("login.placeholder_email")} required />
+          <input
+            type="email"
+            placeholder={t("login.placeholder_email")}
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </label>
         <label>
           {t("login.password")}
-          <input type="password" placeholder={t("login.password")} required />
+          <input
+            type="password"
+            placeholder={t("login.password")}
+            required
+            value={pass}
+            onvChange={(e) => setPass(e.target.value)}
+          />
         </label>
         <button className={css.loginBtn}>{t("login.login_btn")}</button>
         <button className={css.signInBtn}>
