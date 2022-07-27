@@ -22,9 +22,9 @@ export default function LoginPage() {
         dispatch(setUser({ email: userCredential.user.email, id: userCredential.user.uid }));
       })
       .catch((err) => {
-        setError(err.message)
+        setError(err.message);
       });
-  }
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, pass)
@@ -32,7 +32,7 @@ export default function LoginPage() {
         dispatch(setUser({ email: userCredential.user.email, id: userCredential.user.uid }));
       })
       .catch((err) => {
-        setError(err.message)
+        setError(err.message);
       });
   };
   return (
