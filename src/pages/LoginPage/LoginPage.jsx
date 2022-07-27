@@ -3,16 +3,19 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../store/slices/userSlice";
 export default function LoginPage() {
   const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const auth = getAuth();
+  const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, pass)
       .then((userCredential) => {
-        console.log(userCredential.user);
+        dispatch(setUser({ email: userCredential.user.email, id: userCredential.user.uid }));
       })
       .catch((error) => {
         console.log(error);
@@ -44,7 +47,7 @@ export default function LoginPage() {
             placeholder={t("login.password")}
             required
             value={pass}
-            onvChange={(e) => setPass(e.target.value)}
+            onChange={(e) => setPass(e.target.value)}
           />
         </label>
         <button className={css.loginBtn}>{t("login.login_btn")}</button>
@@ -53,7 +56,7 @@ export default function LoginPage() {
           <span>{t("login.sign_in_btn")}</span>
         </button>
         <div className={css.forgot_password}>
-          <Link to="">{t("login.forgot_password")}</Link>
+          <Link to="/password">{t("login.forgot_password")}</Link>
         </div>
         <hr />
         <div className={css.register}>

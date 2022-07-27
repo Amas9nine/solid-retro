@@ -129,6 +129,7 @@
 .forgot_password {
     margin-top: 15px;
     text-align: center;
+    
     a {
         text-decoration: none;
         font-weight: 700;
@@ -143,8 +144,10 @@
     font-size: 15px;
     text-align: center;
     display: flex;
+    justify-content: center;
     a {
         text-decoration: none;
         color: #145cf2;
+        margin-left: 6px;
     }
 }

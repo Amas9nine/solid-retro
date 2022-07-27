@@ -6,37 +6,56 @@
     }
 }
 
+.error {
+    border: 1px solid rgb(146, 23, 23);
+    background-color: rgba(246, 89, 89, 0.346);
+    text-align: center;
+    p{
+        padding-top: 5px;
+    }
+}
+#formErr{
+    color: rgba(47, 40, 40, 0.633);
+}
 @media (max-width: 576px) {
     .main {
         font-size: 14px;
         max-width: 80%;
         margin: 0 auto;
-        p{
+
+        p {
             font-size: 10px;
         }
-        .checkbox{
-            span{
+
+        .checkbox {
+            span {
                 font-size: 12px;
             }
         }
-        .createAc{
+
+        .createAc {
             font-size: 12px;
         }
-        .signInBtn{
+
+        .signInBtn {
             padding: 0 10px;
-            span{
+
+            span {
                 font-size: 12px;
             }
         }
-        .spanAccount{
+
+        .spanAccount {
             font-size: 12px;
-            a{
+
+            a {
                 font-size: 12px;
             }
         }
     }
 
 }
+
 .global {
     width: 100%;
     display: flex;
@@ -78,7 +97,8 @@
         color: #8c8c9e;
         margin: 3px 0 0 0;
         width: 100%;
-        input{
+
+        input {
             margin-top: 5px;
         }
     }
@@ -118,6 +138,18 @@
     font-size: 16px;
     border-radius: 3px;
     cursor: pointer;
+    margin-top: 10px;
+}
+.createAV{
+    width: 100%;
+    background-color: #4077ed6b;
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-top: 10px;
 }
 
 .createAc:hover {
@@ -132,7 +164,7 @@
     justify-content: center;
     border: 1px solid #dce3f1;
     border-radius: 3px;
-    margin-top: 8px;
+    margin-top: 10px;
     background-color: white;
     padding: 0 15px;
 
@@ -174,6 +206,7 @@
         }
     }
 }
+
 .easy_retro {
     width: 180px;
     height: 40px;

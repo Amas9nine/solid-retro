@@ -1,28 +1,25 @@
-import { createSlice } from "@reduxjs/toolkit/dist/configureStore";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  email:null,
-  token: null,
-  id: null,
+  email: null,
+  id: null
 };
 
 const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    setUser(state , action) {
-      state.email = action.payload.email
-      state.token = action.payload.email
-      state.id = action.payload.email
+    setUser(state, action) {
+      state.email = action.payload.email;
+      state.id = action.payload.email;
     },
-    removeUser(state){
-      state.email = null
-      state.email = null
-      state.email = null
-    },
-  },
+    removeUser(state) {
+      state.email = null;
+      state.email = null;
+    }
+  }
 });
 
-export const { setUser, removeUser} = userSlice.action
+export const { setUser, removeUser } = userSlice.actions;
 
-export default userSlice.reducers;
+export default userSlice.reducer;
