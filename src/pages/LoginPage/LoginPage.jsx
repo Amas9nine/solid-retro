@@ -19,7 +19,7 @@ export default function LoginPage() {
       .auth()
       .signInWithPopup(google_provider)
       .then((userCredential) => {
-        dispatch(setUser({ email: userCredential.user.email, id: userCredential.user.uid }));
+        dispatch(setUser({ email: userCredential.user.email, id: userCredential.user.uid, token: userCredential.user.accessToken }));
       })
       .catch((err) => {
         setError(err.message);
@@ -29,8 +29,9 @@ export default function LoginPage() {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, pass)
       .then((userCredential) => {
-        dispatch(setUser({ email: userCredential.user.email, id: userCredential.user.uid }));
+        dispatch(setUser({ email: userCredential.user.email, id: userCredential.user.uid, token: userCredential.user.accessToken }));
       })
+      
       .catch((err) => {
         setError(err.message);
       });
