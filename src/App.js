@@ -7,16 +7,16 @@ import Aboutpage from "./pages/AboutPage/AboutPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import PricingPage from "./pages/PricingPage/PricingPage";
 import PasswordResetPage from "./pages/PasswordResetPage/PasswordResetPage";
-import { PrivateRoute, PublicRoute } from "../src/routes";
+import { PublicRoute } from "../src/routes";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/register" element={<PublicRoute Component={RegisterPage} />} />
         <Route path="/features" element={<PublicRoute Component={FeaturesPage} />} />
-        <Route path="/about" element={<PrivateRoute Component={Aboutpage} />} />
+        <Route path="/about" element={<PublicRoute Component={Aboutpage} />} />
         <Route path="/login" element={<PublicRoute Component={LoginPage} />} />
         <Route path="/pricing" element={<PublicRoute Component={PricingPage} />} />
         <Route path="/password" element={<PublicRoute Component={PasswordResetPage} />} />
