@@ -4,8 +4,7 @@ const initialState = {
   email: null,
   id: null
 };
-console.log(initialState);
-
+console.log(initialState.email);
 const userSlice = createSlice({
   name: "user",
   initialState,
