@@ -18,12 +18,12 @@ export default function PasswordResetPage() {
       .then(() => {
         setEmail("");
         setLoading(false);
-        const notify = () => toast("PASSWORD RESET LINK HAS BEEN SUCCESSFULLY SENT TO YOUR EMAIL");
+        const notify = () => toast(t("password.toast_success"));
         notify();
       })
       .catch(() => {
         setLoading(false);
-        const notify = () => toast("ERROR!!! SOMETHING WENT WRONG");
+        const notify = () => toast(t("password.toast_error"));
         notify();
       });
   };

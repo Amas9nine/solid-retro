@@ -68,7 +68,9 @@
         "email_placeholder": "Your email",
         "reset_password_btn": "Reset my password",
         "or": "Or",
-        "back_to_login": "Back to Login"
+        "back_to_login": "Back to Login",
+        "toast_success": "SUCCESS! Password reset link has been sent to your email, please check it",
+        "toast_error": "ERROR! Something went wrong"
     },
     "register":{
         "register": "Register",
