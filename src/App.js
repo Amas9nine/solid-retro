@@ -7,7 +7,7 @@ import Aboutpage from "./pages/AboutPage/AboutPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import PricingPage from "./pages/PricingPage/PricingPage";
 import PasswordResetPage from "./pages/PasswordResetPage/PasswordResetPage";
-import { PublicRoute } from "../src/routes";
+import { PublicRoute, PrivateRoute } from "../src/routes";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Route path="/about" element={<PublicRoute Component={Aboutpage} />} />
         <Route path="/login" element={<PublicRoute Component={LoginPage} />} />
         <Route path="/pricing" element={<PublicRoute Component={PricingPage} />} />
-        <Route path="/password" element={<PublicRoute Component={PasswordResetPage} />} />
+        <Route path="/password" element={<PrivateRoute Component={PasswordResetPage} />} />
       </Routes>
     </BrowserRouter>
   );

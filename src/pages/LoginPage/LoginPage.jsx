@@ -42,7 +42,6 @@ export default function LoginPage() {
         src="./images/registerPage/easy_retro_logo.svg"
         alt="easy retro logo"
       />
-
       <form className={css.main} onSubmit={handleSubmit}>
         <h5>{t("login.login")}</h5>
         {error ? (
