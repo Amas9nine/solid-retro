@@ -1,13 +1,20 @@
-import { createAction, createReducer } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  hello: "hello"
-};
-
-export const helloWorld = createAction("HELLO_WORLD");
-
-export default createReducer(initialState, {
-  [helloWorld]: function (state) {
-    state.hello = state.hello + "gj";
+export const authSlice = createSlice({
+  name: "login",
+  initialState: {
+    login: []
+  },
+  reducers: {
+    addUser(state, action) {
+      state.login.push({
+        id: action.payload.id,
+        email: action.payload.email
+      });
+    }
   }
 });
+
+export const { addUser } = authSlice.actions;
+
+export default authSlice.reducer;

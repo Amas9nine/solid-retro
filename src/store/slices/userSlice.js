@@ -4,6 +4,7 @@ const initialState = {
   email: null,
   id: null
 };
+console.log(initialState);
 
 const userSlice = createSlice({
   name: "user",
@@ -11,7 +12,7 @@ const userSlice = createSlice({
   reducers: {
     setUser(state, action) {
       state.email = action.payload.email;
-      state.id = action.payload.email;
+      state.id = action.payload.id;
     },
     removeUser(state) {
       state.email = null;
