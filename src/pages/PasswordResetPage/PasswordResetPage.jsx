@@ -3,7 +3,8 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import firebase from "firebase/compat/app";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export default function PasswordResetPage() {
   const { t } = useTranslation();
   const [email, setEmail] = useState("");
@@ -21,12 +22,13 @@ export default function PasswordResetPage() {
       .then(() => {
         setEmail("");
         setLoading(false);
-        alert("Check your email for password reset link");
+        const notify = () => toast("PASSWORD RESET LINK HAS BEEN SUCCESSFULLY SENT TO YOUR EMAIL");
+        notify();
       })
-      .catch((error) => {
+      .catch(() => {
         setLoading(false);
-        toast.error(error.message);
-        console.log("ERROR MSG IN FORGOT PASSWORD", error);
+        const notify = () => toast("ERROR!!! SOMETHING WENT WRONG");
+        notify();
       });
   };
   return (
@@ -36,6 +38,7 @@ export default function PasswordResetPage() {
         src="./images/registerPage/easy_retro_logo.svg"
         alt="easy retro logo"
       />
+      <ToastContainer />
       <form onSubmit={handleSubmit} className={css.main}>
         {loading ? (
           <h5 className={css.loading}>{t("password.loading")}</h5>
