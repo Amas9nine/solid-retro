@@ -63,6 +63,7 @@
     },
     "password":{
         "password_reset_title": "Сброс пароля",
+        "loading": "Идет загрузка...",
         "email": "Почта",
         "email_placeholder": "Ваша почта",
         "reset_password_btn": "Сбросить мой пароль",

@@ -63,6 +63,7 @@
     },
     "password":{
         "password_reset_title": "Password reset",
+        "loading": "Loading...",
         "email": "Email",
         "email_placeholder": "Your email",
         "reset_password_btn": "Reset my password",
