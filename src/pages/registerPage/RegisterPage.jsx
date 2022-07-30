@@ -8,6 +8,7 @@ export default function RegisterPage() {
   const [credintials, setCredintials] = useState({ email: "", name: "", password: "" });
   const auth = firebase.auth();
   const [err, setErr] = useState(false);
+  const [check, setCheck] = useState(false);
   const handleSignUpRequest = (e) => {
     e.preventDefault();
     auth
@@ -69,11 +70,13 @@ export default function RegisterPage() {
           {t("register.name")}
           <input
             type="text"
+            required
             placeholder={t("register.name")}
             name="name"
             value={credintials.name}
             onChange={handleUserInputChange}
           />
+          {credintials.name.length < 4 ? <p id={css.formErr}>{t("nameLo")}</p> : ""}
         </label>
         <label>
           {t("register.email")}
@@ -85,6 +88,7 @@ export default function RegisterPage() {
             value={credintials.email}
             onChange={handleUserInputChange}
           />
+          {credintials.email.includes("@") ? "" : <p id={css.formErr}>{t("email")}</p>}
         </label>
         <label>
           {t("register.password")}
@@ -96,13 +100,13 @@ export default function RegisterPage() {
             onChange={handleUserInputChange}
           />
         </label>
-        {credintials.password.length < 8 ? (
+        {credintials.password.length <= 8 ? (
           <p id={css.formErr}>{t("register.password_requirements")}</p>
         ) : (
           ""
         )}
         <div className={css.checkbox}>
-          <input type="checkbox" />
+          <input onClick={() => setCheck(!check)} type="checkbox" />
           <span>
             {t("register.checkbox")}
             <a href=""> {t("register.terms")} </a>
@@ -114,13 +118,9 @@ export default function RegisterPage() {
           <input type="checkbox" />
           <span>{t("register.checkbox2")} </span>
         </div>
-        {credintials.password.length < 8 ? (
-          <button className={css.createAV}>{t("register.create_account")}</button>
-        ) : (
-          <button onClick={handleSignUpRequest} className={css.createAc}>
-            {t("register.create_account")}
-          </button>
-        )}
+        <button onClick={handleSignUpRequest} className={check ? css.createAc : css.createAV}>
+          {t("register.create_account")}
+        </button>
         <button onClick={signUpwithGoogle} className={css.signInBtn}>
           <img src="./images/registerPage/google_icon.png" alt="google icon" />
           <span>{t("register.sign_in")}</span>
