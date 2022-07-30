@@ -13,12 +13,8 @@ export default function PasswordResetPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const config = {
-      url: process.env.REACT_APP_FORGOT_PASSWORD_REDIRECT,
-      handleCodeInApp: true
-    };
     await auth
-      .sendPasswordResetEmail(email, config)
+      .sendPasswordResetEmail(email)
       .then(() => {
         setEmail("");
         setLoading(false);
@@ -53,7 +49,6 @@ export default function PasswordResetPage() {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            autoFocus
           />
         </label>
         <button className={css.reset_password_btn} disabled={!email}>
