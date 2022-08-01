@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   email: null,
-  id: null
+  id: localStorage.getItem("authId")
 };
-console.log(initialState.email);
+
 const userSlice = createSlice({
   name: "user",
   initialState,

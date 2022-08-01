@@ -20,6 +20,7 @@ export default function LoginPage() {
       .signInWithPopup(google_provider)
       .then((userCredential) => {
         dispatch(setUser({ email: userCredential.user.email, id: userCredential.user.uid }));
+        localStorage.setItem("authId", userCredential.user.uid);
       })
       .catch((err) => {
         setError(err.message);
