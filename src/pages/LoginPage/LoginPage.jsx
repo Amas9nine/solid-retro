@@ -20,6 +20,7 @@ export default function LoginPage() {
       .signInWithPopup(google_provider)
       .then((userCredential) => {
         dispatch(setUser({ email: userCredential.user.email, id: userCredential.user.uid }));
+        localStorage.setItem("authId", userCredential.user.uid);
       })
       .catch((err) => {
         setError(err.message);
@@ -42,7 +43,6 @@ export default function LoginPage() {
         src="./images/registerPage/easy_retro_logo.svg"
         alt="easy retro logo"
       />
-
       <form className={css.main} onSubmit={handleSubmit}>
         <h5>{t("login.login")}</h5>
         {error ? (
