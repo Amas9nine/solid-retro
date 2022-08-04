@@ -6,11 +6,13 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../store/slices/userSlice";
 import firebase from "firebase/compat/app";
+import ReCAPTCHA from "react-google-recaptcha";
 export default function LoginPage() {
   const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [error, setError] = useState("");
+  const [captcha, setCaptcha] = useState(false)
   const auth = getAuth();
   const dispatch = useDispatch();
   const signInWithgoogle = () => {
@@ -72,7 +74,14 @@ export default function LoginPage() {
             onChange={(e) => setPass(e.target.value)}
           />
         </label>
-        <button className={css.loginBtn}>{t("login.login_btn")}</button>
+        <div className={css.recap}>
+          <ReCAPTCHA
+            sitekey="6LfQQkohAAAAAH5coI75ZApxmylS0mQ9hvxwg9wQ"
+            onErrored={() => alert("Check your internet connection")}
+            onChange={() => setCaptcha(!captcha)}
+          />
+        </div>
+        <button className={captcha ? css.loginBtn : css.logBtn}>{t("login.login_btn")}</button>
         <button className={css.signInBtn} onClick={signInWithgoogle}>
           <img src="./images/registerPage/google_icon.png" alt="google icon" />
           <span>{t("login.sign_in_btn")}</span>
