@@ -1,11 +1,37 @@
 import { Container } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import css from "../benefits/benefits.module.scss";
-import { cards, benefitCards } from "../../constants/benefitsData";
 import { Link } from "react-router-dom";
-
+import { useState, useEffect } from "react";
+import firebase from "../../firebase/Firebase";
 const Benefits = () => {
   const { t } = useTranslation();
+  const [data, setData] = useState([]);
+  const [cards, setCards] = useState([])
+  function getData() {
+    ref.onSnapshot((querySnapshot) => {
+      const items = [];
+      querySnapshot.forEach((doc) => {
+        items.push(doc.data());
+      });
+      setData(items);
+    });
+  }
+  const ref = firebase.firestore().collection("benefitUsers").orderBy("id","asc");
+  function getCards() {
+    reg.onSnapshot((querySnapshot) => {
+      const items = [];
+      querySnapshot.forEach((doc) => {
+        items.push(doc.data());
+      });
+      setCards(items);
+    });
+  }
+  useEffect(() => {
+    getData();
+    getCards();
+  }, []);
+  const reg = firebase.firestore().collection("benefitCards").orderBy("id","asc");
   return (
     <>
       <Container>
@@ -27,7 +53,7 @@ const Benefits = () => {
         </div>
         <h2 className={css.retrospective}>{t("benefits.WhatPeopleSay")}</h2>
         <div className={css.WhatPeople}>
-          {cards.map((item, index) => (
+          {data.map((item, index) => (
             <div className={css.card} key={index}>
               <header>
                 <img src={item.img ? item.img : "/images/benefits/avatar.png"} alt="AVATAR" />
@@ -73,7 +99,7 @@ const Benefits = () => {
       <Container>
         <div className={css.cards}>
           <ul>
-            {benefitCards.map((item, index) => (
+            {cards.map((item, index) => (
               <li key={index}>
                 <div>
                   <img src={item.img} alt="IMG" />

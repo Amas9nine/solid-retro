@@ -12,7 +12,7 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [error, setError] = useState("");
-  const [captcha, setCaptcha] = useState(false)
+  const [captcha, setCaptcha] = useState(false);
   const auth = getAuth();
   const dispatch = useDispatch();
   const signInWithgoogle = () => {

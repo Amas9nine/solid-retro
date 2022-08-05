@@ -1,80 +1,80 @@
 export const features = [
   {
-    name: "features.first.name",
-    content: "features.first.content",
-    img: "/images/features/first.png",
+    name: "",
+    content: "",
+    img: "",
     id: 1
   },
   {
-    name: "features.second.name",
-    content: "features.second.content",
-    img: "/images/features/second.gif",
+    name: "",
+    content: "",
+    img: "",
     id: 2
   },
   {
-    name: "features.thirth.name",
-    content: "features.thirth.content",
-    img: "/images/features/thirth.gif",
+    name: "",
+    content: "",
+    img: "",
     id: 3
   },
   {
-    name: "features.fourth.name",
-    content: "features.fourth.content",
-    img: "/images/features/fourth.gif",
+    name: "",
+    content: "",
+    img: "",
     id: 4
   },
   {
-    name: "features.fifth.name",
-    content: "features.fifth.content",
-    img: "/images/features/fifth.gif",
+    name: "",
+    content: "",
+    img: "",
     id: 5
   },
   {
-    name: "features.sixth.name",
-    content: "features.sixth.content",
-    img: "/images/features/sixth.gif",
+    name: "",
+    content: "",
+    img: "",
     id: 6
   },
   {
-    name: "features.seventh.name",
-    content: "features.seventh.content",
-    img: "/images/features/seventh.gif",
+    name: "",
+    content: "",
+    img: "",
     id: 7
   },
   {
-    name: "features.eighth.name",
-    content: "features.eighth.content",
-    img: "/images/features/eighth.gif",
+    name: "",
+    content: "",
+    img: "",
     id: 8
   },
   {
-    name: "features.nineth.name",
-    content: "features.nineth.content",
-    img: "/images/features/nineth.gif",
+    name: "",
+    content: "",
+    img: "",
     id: 9
   },
   {
-    name: "features.tenth.name",
-    content: "features.tenth.content",
-    img: "/images/features/tenth.gif",
+    name: "",
+    content: "",
+    img: "",
     id: 10
   },
   {
-    name: "features.eleventh.name",
-    content: "features.eleventh.content",
-    img: "/images/features/eleventh.gif",
+    name: "",
+    content: "",
+    img: "",
     id: 11
   },
   {
-    name: "features.twelveth.name",
-    content: "features.twelveth.content",
-    img: "/images/features/twelveth.gif",
+    name: "",
+    content: "",
+    img: "",
     id: 12
   },
   {
-    name: "features.thertheenth.name",
-    content: "features.thertheenth.content",
-    img: "/images/features/thirtheen.gif",
+    name: "",
+    content: "",
+    img: "",
     id: 13
   }
 ];
