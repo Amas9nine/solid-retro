@@ -22,8 +22,6 @@ export default function Dashboard() {
       setSkill("")
     }
   } 
-
-
   //
   const [data,setData] = useState([])
   const [laoader ,setLoader] = useState(true)
