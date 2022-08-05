@@ -87,11 +87,28 @@
     border-radius: 3px;
     cursor: pointer;
 }
+.logBtn {
+    width: 100%;
+    background-color: #9eb7ed;
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
 
 .loginBtn:hover {
     background-color: #00308f;
 }
-
+.recap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    cursor: none;
+}
 .signInBtn {
     width: 100%;
     box-sizing: border-box;
