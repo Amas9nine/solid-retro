@@ -6,8 +6,8 @@ import firebase from "../../firebase/Firebase";
 
 export default function PricingPage() {
   const [head, setHead] = useState(false);
-  const [pricing,setPricing] = useState([])
-  function getData() {
+  const [pricing, setPricing] = useState([])
+  useEffect(() => {
     ref.onSnapshot((querySnapshot) => {
       const items = [];
       querySnapshot.forEach((doc) => {
@@ -15,11 +15,8 @@ export default function PricingPage() {
       });
       setPricing(items);
     });
-  }
-  useEffect(() => {
-    getData();
   }, []);
-  const ref = firebase.firestore().collection("pricingPage").orderBy("id","asc");
+  const ref = firebase.firestore().collection("pricingPage").orderBy("id", "asc");
   const { t } = useTranslation();
   return (
     <div className={css.wrapper}>

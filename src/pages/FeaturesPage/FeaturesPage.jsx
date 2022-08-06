@@ -6,8 +6,8 @@ import firebase from "../../firebase/Firebase";
 
 const Featurespage = () => {
   const { t } = useTranslation();
-  const [features,setFeatures] = useState([])
-  function getData() {
+  const [features, setFeatures] = useState([])
+  useEffect(() => {
     ref.onSnapshot((querySnapshot) => {
       const items = [];
       querySnapshot.forEach((doc) => {
@@ -15,11 +15,8 @@ const Featurespage = () => {
       });
       setFeatures(items);
     });
-  }
-  useEffect(() => {
-    getData();
   }, []);
-  const ref = firebase.firestore().collection("featuresPage").orderBy("id","asc");
+  const ref = firebase.firestore().collection("featuresPage").orderBy("id", "asc");
   return (
     <div className={css.amazingFeatures}>
       <h1>{t("features.title")}</h1>

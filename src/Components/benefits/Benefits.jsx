@@ -8,30 +8,24 @@ const Benefits = () => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
   const [cards, setCards] = useState([])
-  function getData() {
-    ref.onSnapshot((querySnapshot) => {
-      const items = [];
-      querySnapshot.forEach((doc) => {
-        items.push(doc.data());
-      });
-      setData(items);
-    });
-  }
-  const ref = firebase.firestore().collection("benefitUsers").orderBy("id","asc");
-  function getCards() {
-    reg.onSnapshot((querySnapshot) => {
-      const items = [];
-      querySnapshot.forEach((doc) => {
-        items.push(doc.data());
-      });
-      setCards(items);
-    });
-  }
   useEffect(() => {
-    getData();
-    getCards();
+      ref.onSnapshot((querySnapshot) => {
+        const items = [];
+        querySnapshot.forEach((doc) => {
+          items.push(doc.data());
+        });
+        setData(items);
+      });
+      reg.onSnapshot((querySnapshot) => {
+        const items = [];
+        querySnapshot.forEach((doc) => {
+          items.push(doc.data());
+        });
+        setCards(items);
+      });
   }, []);
-  const reg = firebase.firestore().collection("benefitCards").orderBy("id","asc");
+  const ref = firebase.firestore().collection("benefitUsers").orderBy("id", "asc");
+  const reg = firebase.firestore().collection("benefitCards").orderBy("id", "asc");
   return (
     <>
       <Container>
