@@ -3,29 +3,39 @@ import { useTranslation } from "react-i18next";
 import css from "../benefits/benefits.module.scss";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import firebase from "../../firebase/Firebase";
+import { db } from "../../firebase/Firebase";
 const Benefits = () => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
   const [cards, setCards] = useState([])
   useEffect(() => {
-      ref.onSnapshot((querySnapshot) => {
+    db.collection("benefitUsers")
+      .orderBy("id", "asc")
+      .get()
+      .then((querySnapshot) => {
         const items = [];
         querySnapshot.forEach((doc) => {
-          items.push(doc.data());
+          items.push({
+            ...doc.data(),
+            id: doc.id
+          });
         });
         setData(items);
       });
-      reg.onSnapshot((querySnapshot) => {
+    db.collection("benefitCards")
+      .get()
+      .then((querySnapshot) => {
         const items = [];
         querySnapshot.forEach((doc) => {
-          items.push(doc.data());
+          items.push({
+            ...doc.data(),
+            id: doc.id
+          })
         });
         setCards(items);
       });
   }, []);
-  const ref = firebase.firestore().collection("benefitUsers").orderBy("id", "asc");
-  const reg = firebase.firestore().collection("benefitCards").orderBy("id", "asc");
+
   return (
     <>
       <Container>

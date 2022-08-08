@@ -2,21 +2,26 @@ import { useTranslation } from "react-i18next";
 import css from "./pricingPage.module.scss";
 import { Container } from "react-bootstrap";
 import { useState, useEffect } from "react";
-import firebase from "../../firebase/Firebase";
+import { db } from "../../firebase/Firebase";
 
 export default function PricingPage() {
   const [head, setHead] = useState(false);
   const [pricing, setPricing] = useState([])
   useEffect(() => {
-    ref.onSnapshot((querySnapshot) => {
+    db.collection("pricingPage")
+    .orderBy("id","asc")
+    .get()
+    .then((querySnapshot) => {
       const items = [];
       querySnapshot.forEach((doc) => {
-        items.push(doc.data());
+        items.push({
+          ...doc.data(),
+          id: doc.id
+        });
       });
       setPricing(items);
     });
   }, []);
-  const ref = firebase.firestore().collection("pricingPage").orderBy("id", "asc");
   const { t } = useTranslation();
   return (
     <div className={css.wrapper}>
