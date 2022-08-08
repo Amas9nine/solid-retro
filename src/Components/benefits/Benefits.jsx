@@ -7,7 +7,7 @@ import { db } from "../../firebase/Firebase";
 const Benefits = () => {
   const { t } = useTranslation();
   const [data, setData] = useState([]);
-  const [cards, setCards] = useState([])
+  const [cards, setCards] = useState([]);
   useEffect(() => {
     db.collection("benefitUsers")
       .orderBy("id", "asc")

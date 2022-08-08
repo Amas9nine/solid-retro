@@ -1,7 +1,6 @@
 import { db } from "../../firebase/Firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { useState, useEffect } from "react";
-import firebase from "../../firebase/Firebase";
 export default function Dashboard() {
   const removeId = () => {
     localStorage.setItem("authId", "");
@@ -14,7 +13,7 @@ export default function Dashboard() {
     if (name !== "") {
       await addDoc(collection(db, "users"), {
         name,
-        id: 2,
+        id: Math.random(),
         skill,
         completed: false
       });
@@ -26,21 +25,24 @@ export default function Dashboard() {
   const [data, setData] = useState([]);
   const [laoader, setLoader] = useState(true);
   function getData() {
-    ref.onSnapshot((querySnapshot) => {
-      const items = [];
-      querySnapshot.forEach((doc) => {
-        items.push(doc.data());
+    db.collection("users")
+    .orderBy("id","asc")
+      .get()
+      .then((querySnapshot) => {
+        const items = [];
+        querySnapshot.forEach((doc) => {
+          items.push({
+            ...doc.data(),
+            id: doc.id
+          });
+        });
+        setData(items);
+        setLoader(false);
       });
-      setData(items);
-      setLoader(false);
-    });
   }
   useEffect(() => {
     getData();
-    console.log(data);
-  }, []);
-  const ref = firebase.firestore().collection("users");
-  console.log(ref);
+  }, [name]);
   return (
     <>
       <h1>hello user</h1>

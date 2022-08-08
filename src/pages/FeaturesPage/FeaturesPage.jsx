@@ -6,7 +6,7 @@ import { db } from "../../firebase/Firebase";
 
 const Featurespage = () => {
   const { t } = useTranslation();
-  const [features, setFeatures] = useState([])
+  const [features, setFeatures] = useState([]);
   useEffect(() => {
     db.collection("featuresPage")
     .orderBy("id", "asc")
