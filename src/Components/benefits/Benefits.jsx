@@ -10,7 +10,7 @@ const Benefits = () => {
   const [cards, setCards] = useState([]);
   useEffect(() => {
     db.collection("benefitUsers")
-      .orderBy("id", "asc")
+      .orderBy("position", "asc")
       .get()
       .then((querySnapshot) => {
         const items = [];
@@ -23,6 +23,7 @@ const Benefits = () => {
         setData(items);
       });
     db.collection("benefitCards")
+      .orderBy("position", "asc")
       .get()
       .then((querySnapshot) => {
         const items = [];

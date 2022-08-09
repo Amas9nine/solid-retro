@@ -9,18 +9,18 @@ export default function PricingPage() {
   const [pricing, setPricing] = useState([])
   useEffect(() => {
     db.collection("pricingPage")
-    .orderBy("id","asc")
-    .get()
-    .then((querySnapshot) => {
-      const items = [];
-      querySnapshot.forEach((doc) => {
-        items.push({
-          ...doc.data(),
-          id: doc.id
+      .orderBy("position", "asc")
+      .get()
+      .then((querySnapshot) => {
+        const items = [];
+        querySnapshot.forEach((doc) => {
+          items.push({
+            ...doc.data(),
+            id: doc.id
+          });
         });
+        setPricing(items);
       });
-      setPricing(items);
-    });
   }, []);
   const { t } = useTranslation();
   return (

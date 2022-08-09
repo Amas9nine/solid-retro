@@ -9,7 +9,7 @@ const Featurespage = () => {
   const [features, setFeatures] = useState([]);
   useEffect(() => {
     db.collection("featuresPage")
-    .orderBy("id", "asc")
+      .orderBy("position", "asc")
       .get()
       .then((querySnapshot) => {
         const items = [];
