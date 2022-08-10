@@ -39,8 +39,8 @@ export default function PasswordResetPage() {
         />
       </Link>
       <form onSubmit={handleSubmit} className={css.main}>
-        {success ? <div className={css.success}>{t("password.toast_success")}</div> : ""}
-        {error ? <div className={css.error}>{t("password.toast_error")}</div> : ""}
+        {success ? <div className={css.success}>{t("password.success_message")}</div> : ""}
+        {error ? <div className={css.error}>{t("password.error_message")}</div> : ""}
         {loading ? (
           <h5 className={css.loading}>{t("password.loading")}</h5>
         ) : (

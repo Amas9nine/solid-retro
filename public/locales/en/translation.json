@@ -69,8 +69,8 @@
         "reset_password_btn": "Reset my password",
         "or": "Or",
         "back_to_login": "Back to Login",
-        "toast_success": "Password reset email sent successfully!",
-        "toast_error": "ERROR! Something went wrong"
+        "success_message": "Password reset email sent successfully!",
+        "error_message": "ERROR! Something went wrong"
     },
     "register":{
         "register": "Register",
