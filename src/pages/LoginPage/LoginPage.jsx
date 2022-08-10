@@ -12,7 +12,7 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [error, setError] = useState("");
-  const [captcha, setCaptcha] = useState(false)
+  const [captcha, setCaptcha] = useState(false);
   const auth = getAuth();
   const dispatch = useDispatch();
   const signInWithgoogle = () => {
@@ -40,11 +40,13 @@ export default function LoginPage() {
   };
   return (
     <div className={css.global}>
-      <img
-        className={css.easy_retro}
-        src="./images/registerPage/easy_retro_logo.svg"
-        alt="easy retro logo"
-      />
+      <Link to="/">
+        <img
+          className={css.easy_retro}
+          src="./images/registerPage/easy_retro_logo.svg"
+          alt="easy retro logo"
+        />
+      </Link>
       <form className={css.main} onSubmit={handleSubmit}>
         <h5>{t("login.login")}</h5>
         {error ? (

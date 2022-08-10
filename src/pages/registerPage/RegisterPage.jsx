@@ -52,11 +52,13 @@ export default function RegisterPage() {
   };
   return (
     <div className={css.global}>
-      <img
-        className={css.easy_retro}
-        src="./images/registerPage/easy_retro_logo.svg"
-        alt="easy retro logo"
-      />
+      <Link to="/">
+        <img
+          className={css.easy_retro}
+          src="./images/registerPage/easy_retro_logo.svg"
+          alt="easy retro logo"
+        />
+      </Link>
       <form className={css.main}>
         <h5>{t("register.register")}</h5>
         {err ? (
