@@ -24,7 +24,6 @@ export default function LoginPage() {
         const user = userCredential.user._delegate;
         dispatch(setUser(user));
         localStorage.setItem("authId", userCredential.user.uid);
-        console.log(user);
       })
       .catch((err) => {
         setError(err.message);
