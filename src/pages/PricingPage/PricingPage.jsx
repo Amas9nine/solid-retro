@@ -1,11 +1,27 @@
 import { useTranslation } from "react-i18next";
 import css from "./pricingPage.module.scss";
-import { useState } from "react";
 import { Container } from "react-bootstrap";
-import { pricing } from "../../constants/pricingPage";
+import { useState, useEffect } from "react";
+import { db } from "../../firebase/Firebase";
 
 export default function PricingPage() {
   const [head, setHead] = useState(false);
+  const [pricing, setPricing] = useState([])
+  useEffect(() => {
+    db.collection("pricingPage")
+      .orderBy("position", "asc")
+      .get()
+      .then((querySnapshot) => {
+        const items = [];
+        querySnapshot.forEach((doc) => {
+          items.push({
+            ...doc.data(),
+            id: doc.id
+          });
+        });
+        setPricing(items);
+      });
+  }, []);
   const { t } = useTranslation();
   return (
     <div className={css.wrapper}>
