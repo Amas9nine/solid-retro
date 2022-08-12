@@ -1,4 +1,4 @@
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { configureStore, combineReducers, getDefaultMiddleware } from "@reduxjs/toolkit";
 import userReducer from "../store/slices/userSlice";
 
 const rootReducer = combineReducers({
@@ -6,5 +6,6 @@ const rootReducer = combineReducers({
 });
 
 export const store = configureStore({
-  reducer: rootReducer
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware()
 });
