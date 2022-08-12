@@ -1,21 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  email: null,
-  id: localStorage.getItem("authId")
+  user: null
 };
 
-const userSlice = createSlice({
+export const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
     setUser(state, action) {
-      state.email = action.payload.email;
-      state.id = action.payload.id;
+      state.user = action.payload;
+      localStorage.setItem("user", JSON.stringify(action.payload))
     },
     removeUser(state) {
-      state.email = null;
-      state.email = null;
+      state.user = null;
+      localStorage.setItem("user","")
     }
   }
 });

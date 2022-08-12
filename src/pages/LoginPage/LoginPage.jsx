@@ -21,7 +21,8 @@ export default function LoginPage() {
       .auth()
       .signInWithPopup(google_provider)
       .then((userCredential) => {
-        dispatch(setUser({ email: userCredential.user.email, id: userCredential.user.uid }));
+        const user = userCredential.user._delegate;
+        dispatch(setUser(user));
         localStorage.setItem("authId", userCredential.user.uid);
       })
       .catch((err) => {
@@ -32,7 +33,8 @@ export default function LoginPage() {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, pass)
       .then((userCredential) => {
-        dispatch(setUser({ email: userCredential.user.email, id: userCredential.user.uid }));
+        const user = userCredential.user;
+        dispatch(setUser(user));
       })
       .catch((err) => {
         setError(err.message);
