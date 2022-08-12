@@ -21,12 +21,8 @@ export default function LoginPage() {
       .auth()
       .signInWithPopup(google_provider)
       .then((userCredential) => {
-<<<<<<< HEAD
         const user = userCredential.user._delegate;
         dispatch(setUser(user));
-=======
-        dispatch(setUser({ email: userCredential.user.email, id: userCredential.user.uid }));
->>>>>>> develop
         localStorage.setItem("authId", userCredential.user.uid);
       })
       .catch((err) => {
