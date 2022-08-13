@@ -24,6 +24,7 @@ export default function LoginPage() {
         const user = userCredential.user._delegate;
         dispatch(setUser(user));
         localStorage.setItem("authId", userCredential.user.uid);
+        window.location.reload(false);
       })
       .catch((err) => {
         setError(err.message);
@@ -35,6 +36,8 @@ export default function LoginPage() {
       .then((userCredential) => {
         const user = userCredential.user;
         dispatch(setUser(user));
+        localStorage.setItem("authId", userCredential.user.uid);
+        window.location.reload(false);
       })
       .catch((err) => {
         setError(err.message);
