@@ -22,9 +22,8 @@ export default function LoginPage() {
       .signInWithPopup(google_provider)
       .then((userCredential) => {
         const user = userCredential.user._delegate;
-        dispatch(setUser(user));
-        localStorage.setItem("authId", userCredential.user.uid);
-        window.location.reload(false);
+        dispatch(setUser({ email: user.email, token: user.accessToken, id: user.uid }));
+        localStorage.setItem("user", JSON.stringify(user));
       })
       .catch((err) => {
         setError(err.message);
@@ -35,9 +34,8 @@ export default function LoginPage() {
     signInWithEmailAndPassword(auth, email, pass)
       .then((userCredential) => {
         const user = userCredential.user;
-        dispatch(setUser(user));
-        localStorage.setItem("authId", userCredential.user.uid);
-        window.location.reload(false);
+        dispatch(setUser({ email: user.email, token: user.accessToken, id: user.uid }));
+        localStorage.setItem("user", JSON.stringify(user));
       })
       .catch((err) => {
         setError(err.message);
