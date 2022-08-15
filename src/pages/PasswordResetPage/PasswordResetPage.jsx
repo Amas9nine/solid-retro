@@ -1,10 +1,10 @@
 import css from "./PasswordResetPage.module.scss";
-// import Email from "./../../Components/email/Email";
+import EasyRetroLogo from "./../../Components/easyRetroLogo/EasyRetroLogo";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import firebase from "firebase/compat/app";
-import "react-toastify/dist/ReactToastify.css";
+
 export default function PasswordResetPage() {
   const { t } = useTranslation();
   const [email, setEmail] = useState("");
@@ -31,13 +31,7 @@ export default function PasswordResetPage() {
   };
   return (
     <div className={css.global}>
-      <Link to="/">
-        <img
-          className={css.easy_retro}
-          src="./images/registerPage/easy_retro_logo.svg"
-          alt="easy retro logo"
-        />
-      </Link>
+      <EasyRetroLogo />
       <form onSubmit={handleSubmit} className={css.main}>
         {success ? <div className={css.success}>{t("password.success_message")}</div> : ""}
         {error ? <div className={css.error}>{t("password.error_message")}</div> : ""}
@@ -46,7 +40,6 @@ export default function PasswordResetPage() {
         ) : (
           <h5>{t("password.password_reset_title")}</h5>
         )}
-        {/* <Email /> */}
         <label>
           {t("login.email")}
           <input
