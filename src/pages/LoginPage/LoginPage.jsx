@@ -1,4 +1,5 @@
 import css from "./LoginPage.module.scss";
+import EasyRetroLogo from "../../Components/easyRetroLogo/EasyRetroLogo";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -7,6 +8,7 @@ import { useDispatch } from "react-redux";
 import { setUser } from "../../store/slices/userSlice";
 import firebase from "firebase/compat/app";
 import ReCAPTCHA from "react-google-recaptcha";
+
 export default function LoginPage() {
   const { t } = useTranslation();
   const [email, setEmail] = useState("");
@@ -42,11 +44,7 @@ export default function LoginPage() {
   };
   return (
     <div className={css.global}>
-      <img
-        className={css.easy_retro}
-        src="./images/registerPage/easy_retro_logo.svg"
-        alt="easy retro logo"
-      />
+      <EasyRetroLogo />
       <form className={css.main} onSubmit={handleSubmit}>
         <h5>{t("login.login")}</h5>
         {error ? (

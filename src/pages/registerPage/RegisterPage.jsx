@@ -1,8 +1,10 @@
 import css from "./RegisterPage.module.scss";
+import EasyRetroLogo from "../../Components/easyRetroLogo/EasyRetroLogo";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import firebase from "firebase/compat/app";
 import { Link } from "react-router-dom";
+
 export default function RegisterPage() {
   const { t } = useTranslation();
   const [credintials, setCredintials] = useState({ email: "", name: "", password: "" });
@@ -52,11 +54,7 @@ export default function RegisterPage() {
   };
   return (
     <div className={css.global}>
-      <img
-        className={css.easy_retro}
-        src="./images/registerPage/easy_retro_logo.svg"
-        alt="easy retro logo"
-      />
+      <EasyRetroLogo />
       <form className={css.main}>
         <h5>{t("register.register")}</h5>
         {err ? (

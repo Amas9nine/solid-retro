@@ -1,14 +1,16 @@
 import css from "./PasswordResetPage.module.scss";
+import EasyRetroLogo from "./../../Components/easyRetroLogo/EasyRetroLogo";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import firebase from "firebase/compat/app";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 export default function PasswordResetPage() {
   const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const auth = firebase.auth();
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,34 +20,31 @@ export default function PasswordResetPage() {
       .then(() => {
         setEmail("");
         setLoading(false);
-        const notify = () => toast(t("password.toast_success"));
-        notify();
+        setError(false);
+        setSuccess("success");
       })
-      .catch(() => {
+      .catch((err) => {
         setLoading(false);
-        const notify = () => toast(t("password.toast_error"));
-        notify();
+        setSuccess(false);
+        setError(err);
       });
   };
   return (
     <div className={css.global}>
-      <img
-        className={css.easy_retro}
-        src="./images/registerPage/easy_retro_logo.svg"
-        alt="easy retro logo"
-      />
-      <ToastContainer />
+      <EasyRetroLogo />
       <form onSubmit={handleSubmit} className={css.main}>
+        {success ? <div className={css.success}>{t("password.success_message")}</div> : ""}
+        {error ? <div className={css.error}>{t("password.error_message")}</div> : ""}
         {loading ? (
           <h5 className={css.loading}>{t("password.loading")}</h5>
         ) : (
           <h5>{t("password.password_reset_title")}</h5>
         )}
         <label>
-          {t("password.email")}
+          {t("login.email")}
           <input
             type="email"
-            placeholder={t("password.email_placeholder")}
+            placeholder={t("login.placeholder_email")}
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
