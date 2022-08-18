@@ -31,7 +31,7 @@ const Benefits = () => {
           items.push({
             ...doc.data(),
             id: doc.id
-          })
+          });
         });
         setCards(items);
       });

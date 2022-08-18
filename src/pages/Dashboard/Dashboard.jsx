@@ -1,10 +1,14 @@
 // import { db } from "../../firebase/Firebase";
 // import { collection, addDoc } from "firebase/firestore";
+
+import { removeUser } from "../../store/slices/userSlice";
+import { useDispatch } from "react-redux/es/exports";
 // import { useState, useEffect } from "react";
 export default function Dashboard() {
-  const removeId = () => {
-    localStorage.setItem("authId", "");
-    window.location.reload(false);
+  const dispatch = useDispatch();
+  const logout = () => {
+    localStorage.setItem("user", JSON.stringify({}));
+    dispatch(removeUser());
   };
   // example how send and how to get data from firebase for my team
   // const [name, setTitle] = useState("");
@@ -47,7 +51,7 @@ export default function Dashboard() {
   return (
     <>
       <h1>hello user</h1>
-      <button onClick={removeId}>{localStorage.getItem("authId")}</button>
+      <button onClick={logout}>LOGOUT</button>
       {/* <form onSubmit={handleSubmit}>
         <input type="text" value={name} onChange={(e) => setTitle(e.target.value)} />
         <input type="text" value={skill} onChange={(e) => setSkill(e.target.value)} />

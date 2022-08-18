@@ -6,7 +6,7 @@ import { db } from "../../firebase/Firebase";
 
 export default function PricingPage() {
   const [head, setHead] = useState(false);
-  const [pricing, setPricing] = useState([])
+  const [pricing, setPricing] = useState([]);
   useEffect(() => {
     db.collection("pricingPage")
       .orderBy("position", "asc")
