@@ -3,6 +3,7 @@ import scss from "./header.module.scss";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
+
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
@@ -20,14 +21,13 @@ const Header = () => {
           <Link to="/" className={scss.img}>
             <img src="/images/header/logo.svg" alt="" />
           </Link>
-          <div className={scss.right + " " + (i18n.language === "ru" ? scss.active : "")}>
+          <div className={scss.right + "" + (i18n.language === "ru" ? scss.active : "")}>
             <label
               class={scss.menu_button_container + " " + (open ? scss.active : "")}
               onClick={() => setOpen(!open)}
             >
               <div class={scss.menu_button}></div>
             </label>
-
             <div class={scss.menu}>
               <div className={scss.nav}>
                 <Link to="/about">{t("header.about")}</Link>

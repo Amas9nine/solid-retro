@@ -8,7 +8,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import PricingPage from "./pages/PricingPage/PricingPage";
 import PasswordResetPage from "./pages/PasswordResetPage/PasswordResetPage";
 import { PublicRoute, PrivateRoute } from "../src/routes";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import DashboardHeaderInside from "./pages/Dashboard/DashboardHeaderInside";
 function App() {
   return (
     <BrowserRouter>
@@ -20,7 +20,7 @@ function App() {
         <Route path="/login" element={<PublicRoute Component={LoginPage} />} />
         <Route path="/pricing" element={<PublicRoute Component={PricingPage} />} />
         <Route path="/password" element={<PublicRoute Component={PasswordResetPage} />} />
-        <Route path="/dashboard" element={<PrivateRoute Component={Dashboard} />} />
+        <Route path="/dashboard" element={<PrivateRoute Component={DashboardHeaderInside} />} />
       </Routes>
     </BrowserRouter>
   );
